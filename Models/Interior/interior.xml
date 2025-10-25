@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>100</max-m>
+    </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+     <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>GLASS-Canopy-R-Glass</object-name>
+       <object-name>GLASS-FixedGlass</object-name>
+	    <object-name>HUDGlass</object-name>
+  </animation>
+
+
+
+
+<!--DTC-->
+<animation>
+        <type>knob</type>
+    <object-name>Cube.062</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->
+        <axis>
+   <object-name>airsource-axis</object-name>
+        </axis>
+        
+        <action>
+            <binding>
+  <command>nasal</command>
+  <script>    var exportdir = getprop("/sim/fg-home")~"/Export";changedtc = gui.FileSelector.new(callback: DTC.loadcart,title: "Select a Data Cartridge (.raptordtc)",button: "Load DTC",dir: exportdir,dotfiles: 1,pattern: ["*.raptordtc"]);changedtc.open();
+</script>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>dtc</tooltip-id>
+                <label>Swap Data Cartridge</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>GLASS-Canopy-R-Glass</object-name>
+       <object-name>GLASS-FixedGlass</object-name>
+	    <object-name>HUDGlass</object-name>
+  </animation>
+
+  <effect>
+       <inherits-from>Effects/model-transparent</inherits-from>
+       <object-name>GLASS-Canopy-R-Glass</object-name>
+       <object-name>GLASS-FixedGlass</object-name>
+	    <object-name>HUDGlass</object-name>
+   </effect>
+  
+  
+  <!-- Dash-->
+ 
+<model>
+    <path>Aircraft/F-23C/Models/Interior/interior.ac</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> -0.0 </y-m>
+      <z-m> 0.00 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/F-23C/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -1.7 </x-m>
+      <y-m> 0.05</y-m>
+      <z-m> 0.00 </z-m>
+    </offsets>
+  </model>
+
+
+
+
+
+
+
+</PropertyList>
+

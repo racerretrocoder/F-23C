@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <default>
+    <menu n="10">
+      <label>F-23C</label>
+      <enabled type="bool">true</enabled>
+      <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+<item>
+			<label>Toggle Damage</label>
+			<binding>
+				<command>nasal</command>
+				<script>
+					if(getprop("/gear/gear/compression-ft") > 0.01){
+						if(getprop("/payload/armament/msg")){screen.log.write("Damage OFF",1,0,0);setprop("/payload/armament/msg",0);}else{screen.log.write("Damage ON",1,0,0);setprop("/payload/armament/msg",1);}
+					}else{
+						screen.log.write("Damage can be toggled only when on the ground! Sorry! Its just the way it is.",1,0,0);
+					}
+				</script>
+			</binding>
+		</item>
+<item>
+			<label>jammer on</label>
+			<binding>
+				<command>nasal</command>
+				<script>
+jammer.start();
+				</script>
+			</binding>
+		</item>
+<item>
+			<label>jammer off</label>
+			<binding>
+				<command>nasal</command>
+				<script>
+jammer.stop();
+				</script>
+			</binding>
+		</item>
+
+
+
+
+
+      <item>
+			<label>Reload weapons</label>
+			<binding>
+				<command>nasal</command>
+				<script>
+        screen.log.write("Press this menu to reload weapons to fire them again! (You will have to press this everytime you drop everything. despite if you change weapons!)");
+        setprop("controls/armament/station[0]/release",0);
+        setprop("controls/armament/station[1]/release",0);
+        setprop("controls/armament/station[2]/release",0);
+        setprop("controls/armament/station[3]/release",0);
+        setprop("controls/armament/station[4]/release",0);
+        setprop("controls/armament/station[5]/release",0);
+        setprop("controls/armament/station[6]/release",0);
+        setprop("controls/armament/station[7]/release",0);
+        setprop("controls/armament/station[8]/release",0);
+        setprop("controls/armament/station[9]/release",0);
+        setprop("controls/armament/station[10]/release",0);
+        setprop("controls/armament/station[11]/release",0);
+        setprop("controls/armament/station[12]/release",0);
+        setprop("controls/armament/station[13]/release",0);
+        setprop("controls/armament/station[14]/release",0);
+        setprop("controls/armament/station[15]/release",0);
+        setprop("controls/armament/station[16]/release",0);
+        setprop("controls/armament/station[17]/release",0);
+        setprop("controls/armament/station[18]/release",0);
+        setprop("controls/armament/station[19]/release",0);
+        setprop("controls/armament/station[20]/release",0);
+
+				</script>
+			</binding>
+		</item>
+
+      <item>
+			<label>Long range (8x Aim-120's)</label>
+			<binding>
+				<command>nasal</command>
+				<script>
+        setprop("controls/armament/station[0]/release",0);
+        setprop("controls/armament/station[1]/release",0);
+        setprop("controls/armament/station[2]/release",0);
+        setprop("controls/armament/station[3]/release",0);
+        setprop("controls/armament/station[4]/release",0);
+        setprop("controls/armament/station[5]/release",0);
+        setprop("controls/armament/station[6]/release",0);
+        setprop("controls/armament/station[7]/release",0);
+        setprop("controls/armament/station[8]/release",0);
+        setprop("controls/armament/station[9]/release",0);
+        setprop("controls/armament/station[10]/release",0);
+        setprop("controls/armament/station[11]/release",0);
+        setprop("controls/armament/station[12]/release",0);
+        setprop("controls/armament/station[13]/release",0);
+        setprop("controls/armament/station[14]/release",0);
+        setprop("controls/armament/station[15]/release",0);
+        setprop("controls/armament/station[16]/release",0);
+        setprop("controls/armament/station[17]/release",0);
+        setprop("controls/armament/station[18]/release",0);
+        setprop("controls/armament/station[19]/release",0);
+        setprop("controls/armament/station[20]/release",0);
+        setprop("sim/weight[0]/selected","Aim-120");
+        setprop("sim/weight[1]/selected","Aim-120");
+        setprop("sim/weight[2]/selected","Aim-120");
+        setprop("sim/weight[3]/selected","Aim-120");
+        setprop("sim/weight[4]/selected","Aim-120"); 
+        setprop("sim/weight[5]/selected","Aim-120");
+        setprop("sim/weight[6]/selected","Aim-120");
+        setprop("sim/weight[7]/selected","Aim-120");
+        setprop("sim/weight[8]/selected",""); 
+        setprop("sim/weight[9]/selected","");
+        setprop("sim/weight[10]/selected","");
+        setprop("sim/weight[11]/selected","");
+				</script>
+			</binding>
+		</item>
+
+
+      <item>
+			<label>Long range + Sides (8x Aim-120 4x Aim-9x)</label>
+			<binding>
+				<command>nasal</command>
+				<script>
+        setprop("controls/armament/station[0]/release",0);
+        setprop("controls/armament/station[1]/release",0);
+        setprop("controls/armament/station[2]/release",0);
+        setprop("controls/armament/station[3]/release",0);
+        setprop("controls/armament/station[4]/release",0);
+        setprop("controls/armament/station[5]/release",0);
+        setprop("controls/armament/station[6]/release",0);
+        setprop("controls/armament/station[7]/release",0);
+        setprop("controls/armament/station[8]/release",0);
+        setprop("controls/armament/station[9]/release",0);
+        setprop("controls/armament/station[10]/release",0);
+        setprop("controls/armament/station[11]/release",0);
+        setprop("controls/armament/station[12]/release",0);
+        setprop("controls/armament/station[13]/release",0);
+        setprop("controls/armament/station[14]/release",0);
+        setprop("controls/armament/station[15]/release",0);
+        setprop("controls/armament/station[16]/release",0);
+        setprop("controls/armament/station[17]/release",0);
+        setprop("controls/armament/station[18]/release",0);
+        setprop("controls/armament/station[19]/release",0);
+        setprop("controls/armament/station[20]/release",0);
+        setprop("sim/weight[0]/selected","Aim-9x");
+        setprop("sim/weight[1]/selected","Aim-9x");
+        setprop("sim/weight[2]/selected","Aim-9x");
+        setprop("sim/weight[3]/selected","Aim-9x");
+        setprop("sim/weight[4]/selected","Aim-120"); 
+        setprop("sim/weight[5]/selected","Aim-120");
+        setprop("sim/weight[6]/selected","Aim-120");
+        setprop("sim/weight[7]/selected","Aim-120");
+        setprop("sim/weight[8]/selected","Aim-120"); 
+        setprop("sim/weight[9]/selected","Aim-120");
+        setprop("sim/weight[10]/selected","Aim-120");
+        setprop("sim/weight[11]/selected","Aim-120");
+				</script>
+			</binding>
+		</item>
+<!--
+      <item>
+        <label>Immatriculation</label>
+        <binding>
+          <command>nasal</command>
+          <script>xf11.immat_dialog.toggle()</script>
+        </binding>
+      </item>
+-->
+    </menu>
+  </default>
+
+</PropertyList>
+
