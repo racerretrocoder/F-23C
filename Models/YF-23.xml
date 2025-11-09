@@ -169,9 +169,9 @@
   <model>
     <path>Aircraft/F-23C/Models/Interior/interior.xml</path>
     <offsets>
-     <x-m> 0</x-m>
+     <x-m> -0.7</x-m>
      <y-m> 0</y-m>
-     <z-m> 0</z-m>
+     <z-m>-0.39</z-m>
     </offsets>
   </model>
 
@@ -486,7 +486,7 @@
     <object-name>WING-L-Slat-Top</object-name>
     <object-name>WING-L-Slat-Bottom</object-name>
     <object-name>WING-L-Slat-Caps</object-name>
-    <property>surface-positions/left-slat-pos-norm</property>
+    <property>fdm/jsbsim/fcs/leading-edge-flaps</property>
     <factor>-25</factor>
     <center>
       <x-m>-1.0</x-m>
@@ -506,7 +506,7 @@
     <object-name>WING-R-Slat-Top</object-name>
     <object-name>WING-R-Slat-Bottom</object-name>
     <object-name>WING-R-Slat-Caps</object-name>
-    <property>surface-positions/right-slat-pos-norm</property>
+    <property>fdm/jsbsim/fcs/leading-edge-flaps</property>
     <factor>-25</factor>
     <center>
       <x-m>-1.0</x-m>

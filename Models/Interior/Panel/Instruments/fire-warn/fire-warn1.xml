@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<!--F-104C fire warning light-->
+
+<PropertyList>
+
+<path>fire-warn1.ac</path>
+
+<!--  LoD  -->
+
+<animation> 
+	<type>range</type>
+	<min-m>0</min-m>
+	<max-m>5</max-m>
+</animation>
+
+ </PropertyList>

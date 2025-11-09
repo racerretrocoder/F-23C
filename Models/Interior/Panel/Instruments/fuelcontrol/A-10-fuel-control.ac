@@ -1207,7 +1207,7 @@ OBJECT poly
 name "boost-pump-main-l-swi"
 data 8
 Mesh.011
-texture "A-10-fuel-control.png"
+texture "A-10-fuel-control.jpg"
 texrep 1 1
 crease 80.000000
 numvert 17
@@ -1338,7 +1338,7 @@ OBJECT poly
 name "boost-pump-main-r-swi"
 data 8
 Mesh.012
-texture "A-10-fuel-control.png"
+texture "A-10-fuel-control.jpg"
 texrep 1 1
 crease 80.000000
 numvert 17
@@ -1469,7 +1469,7 @@ OBJECT poly
 name "boost-pump-wing-l-swi"
 data 8
 Mesh.010
-texture "A-10-fuel-control.png"
+texture "A-10-fuel-control.jpg"
 texrep 1 1
 crease 80.000000
 numvert 17
@@ -1600,7 +1600,7 @@ OBJECT poly
 name "boost-pump-wing-r-swi"
 data 8
 Mesh.009
-texture "A-10-fuel-control.png"
+texture "A-10-fuel-control.jpg"
 texrep 1 1
 crease 80.000000
 numvert 17
@@ -1731,7 +1731,7 @@ OBJECT poly
 name "cross-feed-switch"
 data 8
 Mesh.008
-texture "A-10-fuel-control.png"
+texture "A-10-fuel-control.jpg"
 texrep 1 1
 crease 80.000000
 numvert 17
@@ -1862,7 +1862,7 @@ OBJECT poly
 name "ext-tks-fus-switch"
 data 8
 Mesh.005
-texture "A-10-fuel-control.png"
+texture "A-10-fuel-control.jpg"
 texrep 1 1
 crease 80.000000
 numvert 17
@@ -1993,7 +1993,7 @@ OBJECT poly
 name "ext-tks-wing-switch"
 data 8
 Mesh.006
-texture "A-10-fuel-control.png"
+texture "A-10-fuel-control.jpg"
 texrep 1 1
 crease 80.000000
 numvert 17
@@ -2124,7 +2124,7 @@ OBJECT poly
 name "sig-ampl-switch"
 data 8
 Mesh.004
-texture "A-10-fuel-control.png"
+texture "A-10-fuel-control.jpg"
 texrep 1 1
 crease 80.000000
 numvert 17
@@ -2255,7 +2255,7 @@ OBJECT poly
 name "tk-gate-switch"
 data 8
 Mesh.007
-texture "A-10-fuel-control.png"
+texture "A-10-fuel-control.jpg"
 texrep 1 1
 crease 80.000000
 numvert 17
@@ -2534,7 +2534,7 @@ OBJECT poly
 name "mount"
 data 8
 Mesh.002
-texture "A-10-fuel-control.png"
+texture "A-10-fuel-control.jpg"
 texrep 1 1
 crease 45.000000
 numvert 265

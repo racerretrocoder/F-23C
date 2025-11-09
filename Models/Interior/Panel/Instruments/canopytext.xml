@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ <!-- Hud Computer data    -->
+  
+  <animation>
+  <type>material</type>
+  <object-name>reverse</object-name>
+ 
+  <ambient>
+    <red>1.0</red>
+    <green>0</green>
+    <blue>0.0</blue>
+  </ambient>
+  <diffuse>
+    <red>0.1</red>
+    <green>0</green>
+    <blue>0.0</blue>
+  </diffuse>
+  <emission>
+    <red>0.8</red>
+    <green>0.3</green>
+    <blue>0.3</blue>
+  </emission> 
+ </animation>
+    
+ <text>
+  <name>reverse</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.008</character-size>
+  <offsets>
+   <x-m>0.03</x-m>
+   <y-m>-0.19</y-m>
+   <z-m>0.012</z-m>
+   <pitch-deg>21</pitch-deg>
+   <roll-deg>19</roll-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">REVERSE</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+
+  <animation>
+        <type>select</type>
+        <object-name>reverse</object-name>
+        
+        <condition>
+        <property>surface-positions/reverser-norm[0]</property>
+        </condition>
+    </animation>
+ 
+ 
+
+</PropertyList>
+
+

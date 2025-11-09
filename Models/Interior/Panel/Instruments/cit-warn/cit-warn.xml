@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<!--F-104C compressor inlet temperature warning (SLOW) light-->
+
+<PropertyList>
+
+<path>cit-warn.ac</path>
+
+<animation>
+	<type>select</type>
+	<object-name>lens-on</object-name>
+	<object-name>lens-off</object-name>
+	<condition>
+		<less-than>
+			 <property>velocities/airspeed-kt</property>
+			<value>150</value>
+		</less-than>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>lens-off</object-name>
+	<condition>
+		<greater-than-equals>
+			 <property>velocities/airspeed-kt</property>
+			<value>151</value>
+		</greater-than-equals>
+	</condition>
+</animation>
+
+<!--  LoD  -->
+
+<animation> 
+	<type>range</type>
+	<min-m>0</min-m>
+	<max-m>5</max-m>
+</animation>
+
+ </PropertyList>

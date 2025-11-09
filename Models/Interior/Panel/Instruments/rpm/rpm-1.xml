@@ -5,7 +5,19 @@
 <PropertyList>
 
  <path>rpm.ac</path>
-
+<!-- Turns off non rembrant lighting and effects -->
+<animation>
+        <type>select</type>
+       
+	 <object-name>Face.001</object-name>
+		<condition>
+            <not>
+            <property>/sim/rendering/rembrandt/enabled</property>
+            </not>
+        </condition>
+    </animation>	
+ 
+ 
  <animation>
   <type>rotate</type>
   <object-name>rpm-Needle1</object-name>

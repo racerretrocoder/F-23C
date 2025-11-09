@@ -3,101 +3,261 @@
 <PropertyList>
 
 <animation>
-        <type>range</type>
-        <min-m>0</min-m>
-        <max-m>100</max-m>
-    </animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>500</max-m>
+ </animation>
 
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-     <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>GLASS-Canopy-R-Glass</object-name>
-       <object-name>GLASS-FixedGlass</object-name>
-	    <object-name>HUDGlass</object-name>
-  </animation>
-
-
-
-
-<!--DTC-->
-<animation>
-        <type>knob</type>
-    <object-name>Cube.062</object-name>
-        <value>0.0</value> <!-- or property as usual for rotate animation -->
-        <axis>
-   <object-name>airsource-axis</object-name>
-        </axis>
-        
-        <action>
-            <binding>
-  <command>nasal</command>
-  <script>    var exportdir = getprop("/sim/fg-home")~"/Export";changedtc = gui.FileSelector.new(callback: DTC.loadcart,title: "Select a Data Cartridge (.raptordtc)",button: "Load DTC",dir: exportdir,dotfiles: 1,pattern: ["*.raptordtc"]);changedtc.open();
-</script>
-            </binding>
-        </action>
-        <hovered>
-            <binding>
-                <command>set-tooltip</command>
-                <tooltip-id>dtc</tooltip-id>
-                <label>Swap Data Cartridge</label>
-            </binding>
-        </hovered>
-  <increase>
-      <binding>
-        <command>property-toggle</command>
-        <property>sim/model/clicksmall</property>
-      </binding>
-        </increase>
-        <decrease>
-      <binding>
-        <command>property-toggle</command>
-        <property>sim/model/clicksmall</property>
-      </binding>
-        </decrease> 
-    </animation>
-
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>GLASS-Canopy-R-Glass</object-name>
-       <object-name>GLASS-FixedGlass</object-name>
-	    <object-name>HUDGlass</object-name>
-  </animation>
-
-  <effect>
-       <inherits-from>Effects/model-transparent</inherits-from>
-       <object-name>GLASS-Canopy-R-Glass</object-name>
-       <object-name>GLASS-FixedGlass</object-name>
-	    <object-name>HUDGlass</object-name>
+	<effect>
+      <inherits-from>Effects/model-transparent</inherits-from>
+         <object-name>0fdd30ec_dds</object-name>
    </effect>
+  
+
+
+  
+  <!-- pilots   -->
+<model>
+<name>pilot</name>
+    <path>Aircraft/F-23C/Models/Interior/pilots/pilot.xml</path>
+    <offsets>
+      <x-m> -5.05</x-m>
+      <y-m> -0.02 </y-m>
+      <z-m> 0.9 </z-m>
+    </offsets>
+  </model>
+  
+  
+
+  
+  
+  <!-- Pilot invisible from internally -->
+
+    <animation>
+        <type>select</type>
+        <object-name>pilot</object-name>
+		 <object-name>wso</object-name>
+		<condition>
+<not>
+            <property>sim/current-view/internal</property>
+</not>
+        </condition>
+    </animation>		
   
   
   <!-- Dash-->
  
 <model>
-    <path>Aircraft/F-23C/Models/Interior/interior.ac</path>
+    <path>cockpit.ac</path>
     <offsets>
       <x-m> 0 </x-m>
-      <y-m> -0.0 </y-m>
+      <y-m> 0.0 </y-m>
       <z-m> 0.00 </z-m>
+    </offsets>
+  </model>
+
+  <!-- HUD Diamond -->
+  
+  
+  <model>
+  
+    <name>HUD_ADDS</name>
+      <path>Aircraft/Instruments-3d/radar2/radar-screen.xml</path>
+    <name>diamond</name>
+    <offsets>
+      <x-m>-4.76</x-m>
+   <y-m>-0.06</y-m>
+   <z-m>0.95</z-m>
+      <pitch-deg>0</pitch-deg>
     </offsets>
   </model>
   
-  <model>
-    <path>Aircraft/F-23C/Models/Interior/Panel/panel.xml</path>
+<!-- instruments -->
+
+<model>
+    <path>Aircraft/F-23C//Models/Interior/Panel/panel.xml</path>
     <offsets>
-      <x-m> -1.7 </x-m>
-      <y-m> 0.05</y-m>
-      <z-m> 0.00 </z-m>
+      <x-m>-0.895</x-m>
+      <y-m> 0.068 </y-m>
+      <z-m>0.4 </z-m>
     </offsets>
   </model>
 
+  <!-- Hud Computer data    -->
+  <!--
+  <animation>
+  <type>material</type>
+  <object-name>comm1</object-name>
+  <object-name>comm1-label</object-name>
+  <object-name>comm2</object-name>
+  <object-name>comm2-label</object-name>
+  <object-name>nav1</object-name>
+  <object-name>nav1-label</object-name>
+  <object-name>nav2</object-name>
+  <object-name>nav2-label</object-name>
+  <ambient>
+    <red>1.0</red>
+    <green>0</green>
+    <blue>0.0</blue>
+  </ambient>
+  <diffuse>
+    <red>0.1</red>
+    <green>0</green>
+    <blue>0.0</blue>
+  </diffuse>
+  <emission>
+    <red>0.8</red>
+    <green>0.3</green>
+    <blue>0.3</blue>
+  </emission> 
+ </animation>
+    
+ <text>
+  <name>comm1-label</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>-4.67</x-m>
+   <y-m>-0.105</y-m>
+   <z-m>0.879</z-m>
+   <pitch-deg>21</pitch-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">COM1</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+
+ <text>
+  <name>comm1</name>
+  <font>lcd.txf</font>
+ <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>-4.67</x-m>
+   <y-m>-0.03</y-m>
+    <z-m>0.879</z-m>
+   <pitch-deg>21</pitch-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">number-value</type>
+  <format type="string">%3.3f</format>
+  <truncate type="bool">false</truncate>
+  <property>instrumentation/comm/frequencies/selected-mhz</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>right-top</alignment>
+ </text>
+ 
+ <text>
+  <name>comm2-label</name>
+  <font>lcd.txf</font>
+ <character-size type="double">0.004</character-size>
+  <offsets>
+    <x-m>-4.67</x-m>
+   <y-m>-0.105</y-m>
+   <z-m>0.865</z-m>
+   <pitch-deg>21</pitch-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">COM2</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+ <text>
+  <name>comm2</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+     <x-m>-4.67</x-m>
+   <y-m>-0.03</y-m>
+     <z-m>0.865</z-m>
+   <pitch-deg>21</pitch-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">number-value</type>
+  <format type="string">%3.3f</format>
+  <truncate type="bool">false</truncate>
+  <property>instrumentation/comm[1]/frequencies/selected-mhz</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>right-top</alignment>
+ </text>
+ 
+ <text>
+  <name>nav1-label</name>
+  <font>lcd.txf</font>
+ <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>-4.68</x-m>
+   <y-m>-0.105</y-m>
+   <z-m>0.85</z-m>
+   <pitch-deg>21</pitch-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">NAV1</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+  <text>
+  <name>nav1</name>
+  <font>lcd.txf</font>
+ <character-size type="double">0.004</character-size>
+  <offsets>
+    <x-m>-4.68</x-m>
+    <y-m>-0.03</y-m>
+    <z-m>0.85</z-m>
+   <pitch-deg>21</pitch-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">number-value</type>
+  <format type="string">%3.3f</format>
+  <truncate type="bool">false</truncate>
+  <property>instrumentation/nav/frequencies/selected-mhz</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>right-top</alignment>
+ </text>
+ 
+ <text>
+  <name>nav2-label</name>
+  <font>lcd.txf</font>
+ <character-size type="double">0.004</character-size>
+  <offsets>
+     <x-m>-4.69</x-m>
+   <y-m>-0.105</y-m>
+   <z-m>0.835</z-m>
+   <pitch-deg>21</pitch-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">NAV2</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+ <text>
+  <name>nav2</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+    <x-m>-4.69</x-m>
+    <y-m>-0.03</y-m>
+    <z-m>0.835</z-m>
+   <pitch-deg>21</pitch-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">number-value</type>
+  <format type="string">%3.3f</format>
+  <truncate type="bool">false</truncate>
+  <property>instrumentation/nav[1]/frequencies/selected-mhz</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>right-top</alignment>
+ </text>
 
 
-
-
-
+-->
 
 </PropertyList>
 

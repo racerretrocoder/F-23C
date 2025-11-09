@@ -237,7 +237,7 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <command>property-adjust</command>
-      <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+      <property>instrumentation/comm/frequencies/selected-mhz</property>
       <step type="double">100</step>
       <min>0</min>
       <max>999.99</max>
@@ -252,7 +252,7 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <command>property-adjust</command>
-      <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+      <property>instrumentation/comm/frequencies/selected-mhz</property>
       <step type="double">10</step>
       <min>0</min>
       <max>999.99</max>
@@ -267,7 +267,7 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <command>property-adjust</command>
-      <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+      <property>instrumentation/comm/frequencies/selected-mhz</property>
       <step type="double">1</step>
       <min>0</min>
       <max>999.99</max>
@@ -282,7 +282,7 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <command>property-adjust</command>
-      <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+      <property>instrumentation/comm/frequencies/selected-mhz</property>
       <step type="double">0.1</step>
       <min>0</min>
       <max>999.99</max>
@@ -297,7 +297,7 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <command>property-adjust</command>
-      <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+      <property>instrumentation/comm/frequencies/selected-mhz</property>
       <step type="double">0.01</step>
       <min>0</min>
       <max>999.99</max>
@@ -326,7 +326,7 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <command>property-adjust</command>
-      <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+      <property>instrumentation/comm/frequencies/selected-mhz</property>
       <step type="double">-100</step>
       <min>0</min>
       <max>999.99</max>
@@ -341,7 +341,7 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <command>property-adjust</command>
-      <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+      <property>instrumentation/comm/frequencies/selected-mhz</property>
       <step type="double">-10</step>
       <min>0</min>
       <max>999.99</max>
@@ -356,7 +356,7 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <command>property-adjust</command>
-      <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+      <property>instrumentation/comm/frequencies/selected-mhz</property>
       <step type="double">-10</step>
       <min>0</min>
       <max>999.99</max>
@@ -371,7 +371,7 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <command>property-adjust</command>
-      <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+      <property>instrumentation/comm/frequencies/selected-mhz</property>
       <step type="double">-0.1</step>
       <min>0</min>
       <max>999.99</max>
@@ -386,7 +386,7 @@
       <button>0</button>
       <repeatable>false</repeatable>
       <command>property-adjust</command>
-      <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+      <property>instrumentation/comm/frequencies/selected-mhz</property>
       <step type="double">-0.01</step>
       <min>0</min>
       <max>999.99</max>
@@ -413,7 +413,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>chiffre1</object-name>
-    <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <property>instrumentation/comm/frequencies/selected-mhz</property>
     <factor>0.001</factor>
     <step type="double">100</step>
     <axis>
@@ -426,7 +426,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>chiffre2</object-name>
-    <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <property>instrumentation/comm/frequencies/selected-mhz</property>
     <factor>0.01</factor>
     <step type="double">10</step>
     <axis>
@@ -439,7 +439,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>chiffre3</object-name>
-    <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <property>instrumentation/comm/frequencies/selected-mhz</property>
     <factor>0.1</factor>
     <step type="double">1</step>
     <axis>
@@ -452,7 +452,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>chiffre4</object-name>
-    <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <property>instrumentation/comm/frequencies/selected-mhz</property>
     <factor>1</factor>
     <step type="double">0.1</step>
     <axis>
@@ -465,7 +465,7 @@
   <animation>
     <type>textranslate</type>
     <object-name>chiffre5</object-name>
-    <property>/instrumentation/comm[0]/frequencies/selected-mhz</property>
+    <property>instrumentation/comm/frequencies/selected-mhz</property>
     <factor>10</factor>
     <step type="double">0.01</step>
     <axis>

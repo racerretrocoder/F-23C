@@ -7,7 +7,7 @@
     <animation>
 	<type>rotate</type>
 	<object-name>needle-l</object-name>
-	<property>sim/model/F-15E/consumables/fuel/fuel-dsp-left</property>
+	<property>sim/model/F-15C/consumables/fuel/fuel-dsp-left</property>
 	<interpolation> 
 		<entry><ind>0</ind><dep>189</dep></entry>
 		<entry><ind>3000</ind><dep>270</dep></entry>
@@ -29,7 +29,7 @@
     <animation>
 	<type>rotate</type>
 	<object-name>needle-r</object-name>
-	<property>sim/model/F-15E/consumables/fuel/fuel-dsp-right</property>
+	<property>sim/model/F-15C/consumables/fuel/fuel-dsp-right</property>
 	<interpolation> 
 		<entry><ind>0</ind><dep>171</dep></entry>
 		<entry><ind>3000</ind><dep>90</dep></entry>
@@ -51,7 +51,7 @@
     <animation>
 	    <object-name>knob</object-name>
 	    <type>rotate</type>
-	    <property>sim/model/F-15E/controls/fuel/fuel-dsp-sel</property>
+	    <property>sim/model/F-15C/controls/fuel/fuel-dsp-sel</property>
 	    <factor>45</factor>
 	    <center>
 		    <x-m>0.0122</x-m>
@@ -69,7 +69,7 @@
     <animation>
 	    <object-name>test-button</object-name>
 	    <type>translate</type>
-	    <property>sim/model/F-15E/controls/fuel/fuel-test-ind</property>
+	    <property>sim/model/F-15C/controls/fuel/fuel-test-ind</property>
 	    <factor>-0.005</factor>
 	    <axis>
 		    <x>1</x>
@@ -84,7 +84,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>drum-1</object-name>
-  <property>sim/model/F-15E/consumables/fuel/fuel-dsp-drum</property>
+  <property>sim/model/F-15C/consumables/fuel/fuel-dsp-drum</property>
   <factor>0.1</factor>
   <offset>-1</offset>
   <center>
@@ -103,7 +103,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>drum-2</object-name>
-  <property>sim/model/F-15E/consumables/fuel/fuel-dsp-drum</property>
+  <property>sim/model/F-15C/consumables/fuel/fuel-dsp-drum</property>
   <factor>0.01</factor>
   <offset>-10</offset>
   <step>10</step>
@@ -124,7 +124,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>drum-3</object-name>
-  <property>sim/model/F-15E/consumables/fuel/fuel-dsp-drum</property>
+  <property>sim/model/F-15C/consumables/fuel/fuel-dsp-drum</property>
   <factor>0.001</factor>
   <offset>-100</offset>
   <step>100</step>
@@ -144,7 +144,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>drum-4</object-name>
-  <property>sim/model/F-15E/consumables/fuel/fuel-dsp-drum</property>
+  <property>sim/model/F-15C/consumables/fuel/fuel-dsp-drum</property>
   <factor>0.0001</factor>
   <offset>-1000</offset>
   <step>1000</step>
@@ -165,7 +165,7 @@
  <animation>
   <type>textranslate</type>
   <object-name>drum-5</object-name>
-  <property>sim/model/F-15E/consumables/fuel/fuel-dsp-drum</property>
+  <property>sim/model/F-15C/consumables/fuel/fuel-dsp-drum</property>
   <factor>0.00001</factor>
   <offset>-10000</offset>
   <step>10000</step>

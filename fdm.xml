@@ -104,7 +104,7 @@ The Force that pushes the aircraft for increased manuverability should be lowere
    <ixx unit="SLUG*FT2">     25762 </ixx>
    <iyy unit="SLUG*FT2">     91916 </iyy>
    <izz unit="SLUG*FT2">     85344 </izz>
-   <emptywt unit="LBS" >     37156 </emptywt>
+   <emptywt unit="LBS" >     29000 </emptywt>
    <location name="CG" unit="IN">
 
      <x> 268.52 </x>
@@ -442,8 +442,8 @@ The Force that pushes the aircraft for increased manuverability should be lowere
             <independentVar lookup="row">/accelerations/pilot-gdamped</independentVar>
             <tableData>   
               1     1   
-              18     1   
-              20.5     0.001 
+              12     1   
+              14.1     0.001 
             </tableData>
           </table>
 </product>
@@ -1472,16 +1472,16 @@ The Force that pushes the aircraft for increased manuverability should be lowere
    <aerosurface_scale name="Vector Radian Engine1">
       <input>fcs/vector-rad</input>
       <range>
-        <min> 1 </min>
-        <max>  -1 </max>
+        <min> -1 </min>
+        <max>  1 </max>
       </range>
       <output>propulsion/engine/pitch-angle-rad</output>
    </aerosurface_scale>
    <aerosurface_scale name="Vector Radian Engine2">
       <input>fcs/vector-rad</input>
       <range>
-        <min> 1 </min>
-        <max>  -1 </max>
+        <min> -1 </min>
+        <max>  1 </max>
       </range>
       <output>propulsion/engine[1]/pitch-angle-rad</output>
    </aerosurface_scale>
@@ -1907,7 +1907,7 @@ The Force that pushes the aircraft for increased manuverability should be lowere
            <property>metrics/Sw-sqft</property>
            <property>metrics/bw-ft</property>
            <property>aero/beta-rad</property>
-           <value>-0.1</value>
+           <value>0</value>
        </product>
     </function>
 
@@ -1931,7 +1931,7 @@ The Force that pushes the aircraft for increased manuverability should be lowere
            <property>metrics/bw-ft</property>
            <property>aero/bi2vel</property>
            <property>velocities/r-aero-rad_sec</property>
-           <value>0.15</value>
+           <value>0</value>
        </product>
     </function>
 

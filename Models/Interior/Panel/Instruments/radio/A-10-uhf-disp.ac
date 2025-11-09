@@ -9,7 +9,7 @@ kids 9
 OBJECT poly
 name "mount"
 loc 0.0188413 -0.00133229 0.000928488
-texture "A-10-uhf-disp-mount.rgb"
+texture "A-10-uhf-disp-mount.jpg"
 crease 180.000000
 numvert 36
 0 -0.0313767 -0.0312187
@@ -221,7 +221,7 @@ kids 0
 OBJECT poly
 name "drum-1"
 loc -0.00217367 0.00105799 0.0167903
-texture "A-10-counter-drums.rgb"
+texture "A-10-counter-drums.jpg"
 crease 45.000000
 numvert 4
 0.0204929 0.0147491 0.00166906
@@ -240,7 +240,7 @@ kids 0
 OBJECT poly
 name "00"
 loc -0.00217367 -0.000724913 -0.0067275
-texture "A-10-radios.rgb"
+texture "A-10-radios.jpg"
 crease 45.000000
 numvert 4
 0.0204929 0.00880403 -0.00133151
@@ -259,7 +259,7 @@ kids 0
 OBJECT poly
 name "25"
 loc -0.00265767 -0.000724913 -0.0067275
-texture "A-10-radios.rgb"
+texture "A-10-radios.jpg"
 crease 45.000000
 numvert 4
 0.0206037 -0.000690647 -0.0113174
@@ -278,7 +278,7 @@ kids 0
 OBJECT poly
 name "50"
 loc -0.00265767 -0.000724913 -0.0067275
-texture "A-10-radios.rgb"
+texture "A-10-radios.jpg"
 crease 45.000000
 numvert 4
 0.0206037 -0.000690647 -0.0113174
@@ -297,7 +297,7 @@ kids 0
 OBJECT poly
 name "75"
 loc -0.00265767 -0.000724913 -0.0067275
-texture "A-10-radios.rgb"
+texture "A-10-radios.jpg"
 crease 45.000000
 numvert 4
 0.0204929 0.00880403 -0.00133151
@@ -316,7 +316,7 @@ kids 0
 OBJECT poly
 name "drum-2"
 loc -0.00217367 0.00105799 0.00995087
-texture "A-10-counter-drums.rgb"
+texture "A-10-counter-drums.jpg"
 crease 45.000000
 numvert 4
 0.0206037 -0.0102015 -0.00426165
@@ -335,7 +335,7 @@ kids 0
 OBJECT poly
 name "drum-3"
 loc -0.00217367 0.00105799 0.00303389
-texture "A-10-counter-drums.rgb"
+texture "A-10-counter-drums.jpg"
 crease 45.000000
 numvert 4
 0.0204929 0.0147491 0.00208649
@@ -354,7 +354,7 @@ kids 0
 OBJECT poly
 name "drum-4"
 loc -0.00217367 0.00105799 -0.0037936
-texture "A-10-counter-drums.rgb"
+texture "A-10-counter-drums.jpg"
 crease 45.000000
 numvert 4
 0.0206037 -0.0102015 -0.00426165

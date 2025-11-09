@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+
+  
+  <animation>
+  <type>material</type>
+  <object-name>EMISLIMIT</object-name>
+ <object-name>MASTER</object-name>
+ <object-name>CAUTION</object-name>
+  <ambient>
+    <red>0.0</red>
+    <green>1.0</green>
+    <blue>0.0</blue>
+  </ambient>
+  <diffuse>
+    <red>0.1</red>
+    <green>0</green>
+    <blue>0.0</blue>
+  </diffuse>
+  <emission>
+    <red>0.8</red>
+    <green>0.3</green>
+    <blue>0.3</blue>
+  </emission> 
+ </animation>
+    
+ <text>
+  <name>EMISLIMIT</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.003</character-size>
+  <offsets>
+   <x-m>0.077</x-m>
+   <y-m>-0.252</y-m>
+   <z-m>0.034</z-m>
+   <pitch-deg>-12</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">EMIS LIMIT</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+ <text>
+  <name>MASTER</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.0045</character-size>
+  <offsets>
+   <x-m>0.077</x-m>
+   <y-m>-0.212</y-m>
+   <z-m>0.033</z-m>
+   <pitch-deg>-12</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">MASTER</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+ <text>
+  <name>CAUTION</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.0045</character-size>
+  <offsets>
+   <x-m>0.078</x-m>
+   <y-m>-0.213</y-m>
+   <z-m>0.026</z-m>
+   <pitch-deg>-12</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">CAUTION</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+
+ 
+ 
+  <animation>
+  <type>material</type>
+  <object-name>AI</object-name>
+ <object-name>SAM</object-name>
+ <object-name>ap</object-name>
+  <ambient>
+    <red>0.0</red>
+    <green>1.0</green>
+    <blue>0.0</blue>
+  </ambient>
+  <diffuse>
+    <red>0.1</red>
+    <green>0</green>
+    <blue>0.0</blue>
+  </diffuse>
+  <emission>
+    <red>0.3</red>
+    <green>0.8</green>
+    <blue>0.3</blue>
+  </emission> 
+ </animation>
+ 
+ <text>
+  <name>AI</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.005</character-size>
+  <offsets>
+  <x-m>0.092</x-m>
+   <y-m>0.25</y-m>
+   <z-m>-0.081</z-m>
+   <pitch-deg>-12</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">AI</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+  <text>
+  <name>SAM</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.005</character-size>
+  <offsets>
+   <x-m>0.092</x-m>
+   <y-m>0.23</y-m>
+   <z-m>-0.081</z-m>
+   <pitch-deg>-12</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">SAM</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+ 
+  <text>
+  <name>ap</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.005</character-size>
+  <offsets>
+   <x-m>0.089</x-m>
+   <y-m>0.23</y-m>
+   <z-m>-0.063</z-m>
+   <pitch-deg>-12</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">A/P</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+  <animation>
+        <type>select</type>
+        <object-name>ap</object-name>
+        
+        <condition>
+ <or>
+  <not-equals>
+   <property>/autopilot/locks/heading</property>
+   <value></value>
+  </not-equals>
+  <not-equals>
+   <property>/autopilot/locks/altitude</property>
+   <value></value>
+  </not-equals>
+  <not-equals>
+   <property>/autopilot/locks/speed</property>
+   <value></value>
+  </not-equals>
+  <and>
+  <not-equals>
+   <property>/autopilot/locks/heading</property>
+   <value></value>
+  </not-equals>
+  <not-equals>
+   <property>/autopilot/locks/altitude</property>
+   <value></value>
+  </not-equals>
+  </and>
+  <and>
+  <not-equals>
+   <property>/autopilot/locks/altitude</property>
+   <value></value>
+  </not-equals>
+  <not-equals>
+   <property>/autopilot/locks/speed</property>
+   <value></value>
+  </not-equals>
+  </and>
+  <and>
+  <not-equals>
+   <property>/autopilot/locks/heading</property>
+   <value></value>
+  </not-equals>
+  <not-equals>
+   <property>/autopilot/locks/speed</property>
+   <value></value>
+  </not-equals>
+  </and>
+ </or>
+</condition>
+    </animation>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <animation>
+  <type>material</type>
+  <object-name>LOW</object-name>
+  <object-name>ALT</object-name>
+ <object-name>cpy</object-name>
+ <object-name>stall</object-name>
+ <object-name>spd</object-name>
+<object-name>brake</object-name>
+ <ambient>
+    <red>1.0</red>
+    <green>0.0</green>
+    <blue>0.0</blue>
+  </ambient>
+  <diffuse>
+    <red>0.1</red>
+    <green>0</green>
+    <blue>0.0</blue>
+  </diffuse>
+  <emission>
+    <red>0.8</red>
+    <green>0.3</green>
+    <blue>0.3</blue>
+  </emission> 
+ </animation>
+ 
+ 
+ <text>
+  <name>LOW</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.005</character-size>
+  <offsets>
+   <x-m>0.065</x-m>
+   <y-m>0.05</y-m>
+   <z-m>0.05</z-m>
+   <pitch-deg>-12</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">LOW</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+ <text>
+  <name>ALT</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.005</character-size>
+  <offsets>
+   <x-m>0.0665</x-m>
+   <y-m>0.05</y-m>
+   <z-m>0.044</z-m>
+   <pitch-deg>-12</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">ALT</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+
+  <animation>
+        <type>select</type>
+        <object-name>LOW</object-name>
+        <object-name>ALT</object-name>
+        <condition>
+            <less-than-equals>
+                    		<property>position/altitude-agl-ft</property>
+                    		<value>250</value>
+                  	</less-than-equals>
+            
+                <equals>
+              <property>/gear/gear[0]/position-norm</property>
+              <value>0</value>
+             </equals>
+           
+        </condition>
+    </animation>
+
+ 
+ <text>
+  <name>cpy</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.003</character-size>
+  <offsets>
+   <x-m>0.07</x-m>
+   <y-m>0.105</y-m>
+   <z-m>0.027</z-m>
+   <pitch-deg>-12</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">CANOPY</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+ <animation>
+        <type>select</type>
+        <object-name>cpy</object-name>
+        
+        <condition>
+		<not-equals>
+			<property>instrumentation/doors/crew/position-norm</property>
+			<value>0</value>
+		</not-equals>
+	</condition>
+    </animation>
+ 
+
+ <text>
+  <name>stall</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.0035</character-size>
+  <offsets>
+   <x-m>0.069</x-m>
+   <y-m>0.05</y-m>
+   <z-m>0.031</z-m>
+   <pitch-deg>-12</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">STALL</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+ 
+ 
+ <animation>
+        <type>select</type>
+        <object-name>stall</object-name>
+        
+       <condition>
+            <less-than>
+                <property>velocities/airspeed-kt</property>
+                <value>120</value>
+            </less-than>
+          
+        </condition>
+    </animation>
+	
+	
+<text>
+  <name>spd</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.003</character-size>
+  <offsets>
+   <x-m>0.069</x-m>
+   <y-m>0.07</y-m>
+   <z-m>0.031</z-m>
+   <pitch-deg>-12</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">SPD</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text>
+
+<text>
+  <name>brake</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.003</character-size>
+  <offsets>
+   <x-m>0.07</x-m>
+   <y-m>0.068</y-m>
+   <z-m>0.027</z-m>
+   <pitch-deg>-12</pitch-deg>
+   <roll-deg>0</roll-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">BRAKE</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-top</alignment>
+ </text> 
+ 
+ 
+ <animation>
+        <type>select</type>
+        <object-name>spd</object-name>
+        <object-name>brake</object-name>
+       <condition>
+            
+                <property>surface-positions/speedbrake-pos-norm</property>
+                
+           
+          
+        </condition>
+    </animation>
+ 
+</PropertyList>
+
+

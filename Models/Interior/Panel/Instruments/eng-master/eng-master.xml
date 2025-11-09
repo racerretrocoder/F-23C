@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ <path>eng-master.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>starter</object-name>
+    <emission>
+      <red> 0.5 </red>
+      <green> 0.5 </green>
+      <blue>  0.5 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>ready-lamp-on</object-name>
+    <emission>
+      <red> 1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>base</object-name>
+    <object-name>gen-LH</object-name>
+    <object-name>gen-RH</object-name>
+    <object-name>eng-master-LH</object-name>
+    <object-name>eng-master-RH</object-name>
+    <object-name>emerg</object-name>
+    <object-name>ready-lamp-off</object-name>
+    <object-name>case-LH</object-name>
+    <object-name>case-RH</object-name>
+    <object-name>eng-ctrl-RH</object-name>
+    <object-name>eng-ctrl-LH</object-name>
+    <object-name>starter</object-name>
+    <emission>
+      <red>   0.5 </red>
+      <green> 0.2 </green>
+      <blue>  0.2 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+    </emission>
+  </animation>
+
+
+<!--   GEN-RH   -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>gen-RH</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/engine[0]/generator</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>gen-RH</object-name>
+    <property>controls/electric/engine[0]/generator</property>
+    <factor>35</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.002 </x-m>
+      <y-m>-0.031 </y-m>
+      <z-m>-0.043 </z-m>
+    </center>
+  </animation>
+
+
+<!--   GEN-LH   -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>gen-LH</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/engine[1]/generator</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>gen-LH</object-name>
+    <property>controls/electric/engine[1]/generator</property>
+    <factor>35</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.002 </x-m>
+      <y-m>-0.056 </y-m>
+      <z-m>-0.043 </z-m>
+    </center>
+  </animation>
+
+
+<!-- ENG MASTER RH-->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>eng-master-RH</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[0]/master-sw</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>eng-master-RH</object-name>
+    <property>controls/engines/engine[0]/master-sw</property>
+    <factor>22.5</factor>
+    <offset>-22.5</offset>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.002 </x-m>
+      <y-m> 0.052 </y-m>
+      <z-m> -0.108 </z-m>
+    </center>
+  </animation>
+
+
+<!-- ENG MASTER LH -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>eng-master-LH</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/master-sw</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>eng-master-LH</object-name>
+    <property>controls/engines/engine[1]/master-sw</property>
+    <factor>22.5</factor>
+    <offset>-22.5</offset>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.002 </x-m>
+      <y-m> 0.052 </y-m>
+      <z-m> -0.108 </z-m>
+    </center>
+  </animation>
+
+
+
+<!-- CASE RH-->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>case-RH</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/engines/engine[0]/master-case</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>case-RH</object-name>
+    <property>controls/engines/engine[0]/master-case</property>
+    <factor>75</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.003 </x-m>
+      <y-m> 0.052 </y-m>
+      <z-m> -0.085 </z-m>
+    </center>
+  </animation>
+
+
+<!-- CASE LH-->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>case-LH</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/engines/engine[1]/master-case</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>case-LH</object-name>
+    <property>controls/engines/engine[1]/master-case</property>
+    <factor>75</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.003 </x-m>
+      <y-m> 0.052 </y-m>
+      <z-m> -0.085 </z-m>
+    </center>
+  </animation>
+
+<!-- STARTER -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>starter</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/APU/off-start-run</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>starter</object-name>
+    <property>controls/APU/off-start-run</property>
+    <factor>35</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.004 </x-m>
+      <y-m> 0.015 </y-m>
+      <z-m> -0.109 </z-m>
+    </center>
+  </animation>
+
+<!-- EXT POWER -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>ext-pwr</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/electric/external-power</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>ext-pwr</object-name>
+    <property>controls/electric/external-power</property>
+    <factor>35</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.002 </x-m>
+      <y-m> -0.016 </y-m>
+      <z-m> -0.094 </z-m>
+    </center>
+  </animation>
+
+<!-- EMERG GEN -->
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>emerg</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/electric/APU-generator</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>emerg</object-name>
+    <property>controls/electric/APU-generator</property>
+    <factor>35</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.002 </x-m>
+      <y-m> 0.003 </y-m>
+      <z-m> -0.043 </z-m>
+    </center>
+  </animation>
+
+<!-- READY LAMP -->
+
+  <animation>
+   <type>select</type>
+    <object-name>ready-lamp-on</object-name>
+     <condition>
+      <and>
+      <equals>
+      <property>/controls/APU/ready</property>
+      <value>1</value>
+      </equals>
+      <equals>
+      <property>controls/APU/off-start-run</property>
+      <value>1</value>
+      </equals>
+      </and>
+     </condition>
+  </animation>
+
+
+</PropertyList>
+

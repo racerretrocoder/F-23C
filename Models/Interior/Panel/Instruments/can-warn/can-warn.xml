@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<!--F-104C canopy warning light-->
+
+<PropertyList>
+
+<path>can-warn.ac</path>
+
+<animation>
+	<type>select</type>
+	<object-name>light-off</object-name>
+	<condition>
+		<equals>
+			<property>instrumentation/doors/crew/position-norm</property>
+			<value>0</value>
+		</equals>
+	</condition>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>light-on</object-name>
+	<condition>
+		<not-equals>
+			<property>instrumentation/doors/crew/position-norm</property>
+			<value>0</value>
+		</not-equals>
+	</condition>
+</animation>
+
+<animation>
+	<type>timed</type>
+	<object-name>lens-on</object-name>
+	<object-name>lens-off</object-name>
+	<use-personality type="bool">true</use-personality>
+	<branch-duration-sec>1</branch-duration-sec>
+	<branch-duration-sec>1</branch-duration-sec>
+</animation>
+
+<!--  LoD  -->
+
+<animation> 
+	<type>range</type>
+	<min-m>0</min-m>
+	<max-m>5</max-m>
+</animation>
+
+ </PropertyList>

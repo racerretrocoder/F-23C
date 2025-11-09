@@ -29,7 +29,7 @@ kids 0
 OBJECT poly
 name "tone-sqdis-switch"
 loc 0.01604 0.01395 0.0562215
-texture "A-10-an-arc-186-mount.rgb"
+texture "A-10-an-arc-186-mount.jpg"
 crease 45.000000
 numvert 17
 -0.00136299 -0.0149736 -0.001079
@@ -158,7 +158,7 @@ kids 0
 OBJECT poly
 name "pressets-wheel"
 loc 0.0399321 -0.0156851 -0.0110243
-texture "A-10-an-arc-186-mount.rgb"
+texture "A-10-an-arc-186-mount.jpg"
 crease 78.000000
 numvert 28
 -0.00133688 0 0
@@ -422,7 +422,7 @@ kids 0
 OBJECT poly
 name "mode-knob"
 loc 0.0362885 0.00574161 -0.0522969
-texture "A-10-an-arc-186-mount.rgb"
+texture "A-10-an-arc-186-mount.jpg"
 crease 92.000000
 numvert 31
 0.00461628 -0.00482935 0.00446935
@@ -572,7 +572,7 @@ kids 0
 OBJECT poly
 name "freq-select-knob"
 loc 0.0347616 0.00511296 0.0490143
-texture "A-10-an-arc-186-mount.rgb"
+texture "A-10-an-arc-186-mount.jpg"
 crease 92.000000
 numvert 31
 0.00184727 -0.00422808 -0.00270274
@@ -722,7 +722,7 @@ kids 0
 OBJECT poly
 name "vol-knob"
 loc 0.0032507 0.0062026 0.0486115
-texture "A-10-an-arc-186-mount.rgb"
+texture "A-10-an-arc-186-mount.jpg"
 crease 45.000000
 numvert 21
 0 0.00530629 0.00582438
@@ -881,7 +881,7 @@ kids 0
 OBJECT poly
 name "load-button"
 loc 0.0360652 0.00393859 0.0286356
-texture "A-10-an-arc-186-mount.rgb"
+texture "A-10-an-arc-186-mount.jpg"
 crease 92.000000
 numvert 21
 0 0.00298413 0
@@ -1040,7 +1040,7 @@ kids 0
 OBJECT poly
 name "freq-knob-10"
 loc 0.0183724 0.00499594 0.0204439
-texture "A-10-an-arc-186-mount.rgb"
+texture "A-10-an-arc-186-mount.jpg"
 crease 102.000000
 numvert 21
 0.00404539 0.00409343 0.00304253
@@ -1199,7 +1199,7 @@ kids 0
 OBJECT poly
 name "pressets-10"
 loc 0.0302913 0.000991552 -0.0106253
-texture "A-10-counter-drums.rgb"
+texture "A-10-counter-drums.jpg"
 crease 45.000000
 numvert 4
 -0.00349036 0 0.00231967
@@ -1218,7 +1218,7 @@ kids 0
 OBJECT poly
 name "freq-knob-1"
 loc 0.0155529 0.00499594 -0.00201467
-texture "A-10-an-arc-186-mount.rgb"
+texture "A-10-an-arc-186-mount.jpg"
 crease 92.000000
 numvert 21
 0 0.00409343 0
@@ -1377,7 +1377,7 @@ kids 0
 OBJECT poly
 name "freq-knob-0001"
 loc 0.0150254 0.00499594 -0.0452968
-texture "A-10-an-arc-186-mount.rgb"
+texture "A-10-an-arc-186-mount.jpg"
 crease 92.000000
 numvert 21
 0.00404581 0.00409343 0.0030425
@@ -1536,7 +1536,7 @@ kids 0
 OBJECT poly
 name "freq-knob-01"
 loc 0.0152138 0.00499594 -0.0235196
-texture "A-10-an-arc-186-mount.rgb"
+texture "A-10-an-arc-186-mount.jpg"
 crease 92.000000
 numvert 21
 0 0.00409343 0
@@ -1695,7 +1695,7 @@ kids 0
 OBJECT poly
 name "mount"
 loc 0.022803 0.000763 -2.6118e-05
-texture "A-10-an-arc-186-mount.rgb"
+texture "A-10-an-arc-186-mount.jpg"
 crease 45.000000
 numvert 24
 0.0281801 -0.00271188 0.077312
@@ -1866,7 +1866,7 @@ kids 0
 OBJECT poly
 name "ring-01"
 loc 0.000145731 0.000991552 -0.0244184
-texture "A-10-counter-drums.rgb"
+texture "A-10-counter-drums.jpg"
 crease 45.000000
 numvert 4
 -0.00333321 0 0.00239157
@@ -1885,7 +1885,7 @@ kids 0
 OBJECT poly
 name "ring-1"
 loc 9.60398e-05 0.000991552 -0.00254153
-texture "A-10-counter-drums.rgb"
+texture "A-10-counter-drums.jpg"
 crease 45.000000
 numvert 4
 0.00349037 0 -0.00231967
@@ -1904,7 +1904,7 @@ kids 0
 OBJECT poly
 name "ring-10"
 loc 0.000723045 0.000991552 0.02027
-texture "A-10-radios-2.rgb"
+texture "A-10-radios-2.jpg"
 crease 45.000000
 numvert 4
 -0.00453888 0 0.00647236
@@ -1923,7 +1923,7 @@ kids 0
 OBJECT poly
 name "00"
 loc 0.000301521 0.000991552 -0.045831
-texture "A-10-radios.rgb"
+texture "A-10-radios.jpg"
 crease 45.000000
 numvert 4
 -0.00382658 0 0.00499295
@@ -1942,7 +1942,7 @@ kids 0
 OBJECT poly
 name "25"
 loc 0.000301521 0.000991552 -0.045831
-texture "A-10-radios.rgb"
+texture "A-10-radios.jpg"
 crease 45.000000
 numvert 4
 0.00382658 0 -0.00499295
@@ -1961,7 +1961,7 @@ kids 0
 OBJECT poly
 name "50"
 loc 0.000301521 0.000991552 -0.045831
-texture "A-10-radios.rgb"
+texture "A-10-radios.jpg"
 crease 45.000000
 numvert 4
 0.00382658 0 -0.00499295
@@ -1980,7 +1980,7 @@ kids 0
 OBJECT poly
 name "75"
 loc 0.000301521 0.000991552 -0.045831
-texture "A-10-radios.rgb"
+texture "A-10-radios.jpg"
 crease 45.000000
 numvert 4
 -0.00382658 0 0.00499294
@@ -1999,7 +1999,7 @@ kids 0
 OBJECT poly
 name "pressets-01"
 loc 0.030341 0.000991552 -0.0158591
-texture "A-10-counter-drums.rgb"
+texture "A-10-counter-drums.jpg"
 crease 45.000000
 numvert 4
 0.00333321 0 -0.00239157

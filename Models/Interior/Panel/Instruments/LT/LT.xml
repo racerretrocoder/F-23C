@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>LT.ac</path>
+    
+    <animation>
+       <type>range</type>
+       <min-m>0</min-m>
+       <max-m>10</max-m>
+    </animation>
+ 
+  <animation>
+ <object-name>base</object-name>
+  <object-name>L-CONS</object-name>
+  <object-name>R-CONS</object-name>
+  <object-name>AUX</object-name>
+  <object-name>FLT</object-name>
+  <object-name>ENG</object-name>
+  <object-name>WARNING</object-name>
+  <object-name>STORM</object-name>
+   <type>material</type>
+     <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+    <animation>
+        <type>pick</type>
+          <object-name>L-CONS</object-name>
+          <object-name>R-CONS</object-name>
+          <object-name>AUX</object-name>
+          <object-name>FLT</object-name>
+          <object-name>ENG</object-name>
+          <object-name>STORM</object-name>
+        <action>
+            <button>3</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/lighting/instrument-lights-norm</property>
+                <step>0.1</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+          <object-name>L-CONS</object-name>
+          <object-name>R-CONS</object-name>
+          <object-name>AUX</object-name>
+          <object-name>FLT</object-name>
+          <object-name>ENG</object-name>
+          <object-name>STORM</object-name>
+        <action>
+            <button>4</button>
+            <repeatable>true</repeatable>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/lighting/instrument-lights-norm</property>
+                <step>-0.1</step>
+                <min>0</min>
+                <max>1</max>
+            </binding>
+        </action>
+    </animation>
+
+ 
+
+
+
+    <animation>
+    <type>rotate</type>
+    <object-name>L-CONS</object-name>
+    <property>controls/lighting/instrument-lights-norm</property>
+    <factor>270</factor>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+    <center>
+      <x-m>  0.006 </x-m>
+      <y-m> -0.028 </y-m>
+      <z-m>  0.009 </z-m>
+    </center>
+    </animation>
+
+    <animation>
+    <type>rotate</type>
+    <object-name>R-CONS</object-name>
+    <property>controls/lighting/instrument-lights-norm</property>
+    <factor>270</factor>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+    <center>
+      <x-m>  0.006 </x-m>
+      <y-m>  0.049 </y-m>
+      <z-m>  0.009 </z-m>
+    </center>
+    </animation>
+
+    <animation>
+    <type>rotate</type>
+    <object-name>AUX</object-name>
+    <property>controls/lighting/instrument-lights-norm</property>
+    <factor>270</factor>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+    <center>
+      <x-m>  0.007 </x-m>
+      <y-m>  0.011 </y-m>
+      <z-m> -0.045 </z-m>
+    </center>
+    </animation>
+
+    <animation>
+    <type>rotate</type>
+    <object-name>FLT</object-name>
+    <property>controls/lighting/instrument-lights-norm</property>
+    <factor>270</factor>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+    <center>
+      <x-m>  0.006 </x-m>
+      <y-m> -0.029 </y-m>
+      <z-m> -0.094 </z-m>
+    </center>
+    </animation>
+
+    <animation>
+    <type>rotate</type>
+    <object-name>ENG</object-name>
+    <property>controls/lighting/instrument-lights-norm</property>
+    <factor>270</factor>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+    <center>
+      <x-m>  0.006 </x-m>
+      <y-m>  0.045 </y-m>
+      <z-m> -0.094 </z-m>
+    </center>
+    </animation>
+
+    <animation>
+    <type>rotate</type>
+    <object-name>STORM</object-name>
+    <property>controls/lighting/instrument-lights-norm</property>
+    <factor>270</factor>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+    <center>
+      <x-m>  0.006 </x-m>
+      <y-m>  0.045 </y-m>
+      <z-m> -0.141 </z-m>
+    </center>
+    </animation>
+
+<!--  Switch  -->
+
+ <animation>
+    <type>material</type>
+    <object-name>SW1</object-name>
+    <object-name>SW2</object-name>
+    <emission>
+      <red>   0.5 </red>
+      <green> 0.2 </green>
+      <blue>  0.2 </blue>
+      <factor-prop>controls/electric/battery-switch</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>SW1</object-name>
+    <object-name>SW2</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+	<command>property-toggle</command>
+	<property>controls/lighting/panel-norm</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/instruments-norm</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/instrument-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>SW1</object-name>
+    <object-name>SW2</object-name>
+      <property>controls/lighting/instruments-norm</property>
+    <property>controls/lighting/panel-norm</property>
+    <factor>35</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0.005 </x-m>
+      <y-m> -0.041 </y-m>
+      <z-m> -0.048 </z-m>
+    </center>
+  </animation>
+
+</PropertyList>
+
+

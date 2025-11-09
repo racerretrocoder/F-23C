@@ -4,7 +4,7 @@
  
  <submodel>
     <name>Tracer</name> 
-    <model>Aircraft/F-23C/Models/Effects/guns/Tracer.xml</model>
+    <model>Aircraft/F-23C/Models/Effects/guns/apibullet-tracer.xml</model>
     <trigger>controls/armament/trigger</trigger>
     <speed>2500</speed>
     <repeat>true</repeat>

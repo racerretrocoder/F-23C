@@ -1,9 +1,9 @@
 AC3Db
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1 amb 1 1 1 emis 0 0 0 spec 0 0 0 shi 10 trans 0
-MATERIAL "ac3dmat12.001" rgb 0.306 0.298 0.294 amb 0.299333 0.299333 0.299333 emis 0 0 0 spec 0.235 0.227 0.235 shi 27 trans 0
+MATERIAL "ac3dmat12.001" rgb 0.306 0.298 0.294 amb 0.306 0.298 0.294 emis 0 0 0 spec 0.235 0.227 0.235 shi 27 trans 0
 MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333 amb 0.533333 0.533333 0.533333 emis 0 0 0 spec 0 0 0 shi 10 trans 0
-MATERIAL "ac3dmat12.002" rgb 0.322 0.314 0.314 amb 0.316667 0.316667 0.316667 emis 0 0 0 spec 0 0 0 shi 10 trans 0
+MATERIAL "ac3dmat12.002" rgb 0.322 0.314 0.314 amb 0.322 0.314 0.314 emis 0 0 0 spec 0 0 0 shi 10 trans 0
 MATERIAL "ac3dmat0" rgb 0 0 0 amb 0 0 0 emis 0 0 0 spec 0 0 0 shi 10 trans 0
 MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667 amb 0.266667 0.266667 0.266667 emis 0 0 0 spec 0.5 0.5 0.5 shi 10 trans 0
 OBJECT world
@@ -506,7 +506,7 @@ OBJECT poly
 name "flaps-r-side"
 data 8
 Mesh.010
-texture "A-10-throttle.rgb"
+texture "A-10-throttle.png"
 texrep 1 1
 crease 45.000000
 numvert 13
@@ -1390,7 +1390,7 @@ OBJECT poly
 name "mount"
 data 8
 Mesh.007
-texture "A-10-throttle.rgb"
+texture "A-10-throttle.png"
 texrep 1 1
 crease 45.000000
 numvert 4
@@ -2078,7 +2078,7 @@ OBJECT poly
 name "skirt"
 data 8
 Mesh.008
-texture "A-10-throttle.rgb"
+texture "A-10-throttle.png"
 texrep 1 1
 crease 45.000000
 numvert 56
