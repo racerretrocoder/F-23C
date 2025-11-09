@@ -4,7 +4,7 @@
 
  
 
-<!-- stdby-adi -->
+<!-- stdby-adi
   <model>
     <path>Aircraft/F-15DJ_ADTW/Models/Interior/Panel/stdby-adi/stdby-adi.xml</path>
     <offsets>
@@ -19,7 +19,7 @@
 
 
 
-<!-- stdby-asi -->
+
   <model>
     <path>Aircraft/F-15DJ_ADTW/Models/Interior/Panel/stdby-asi/stdby-asi.xml</path>
     <offsets>
@@ -33,7 +33,7 @@
   </model>
 
 
-<!-- stdby-alt -->
+
   <model>
     <path>Aircraft/F-15DJ_ADTW/Models/Interior/Panel/stdby-alt/stdby-alt.xml</path>
     <offsets>
@@ -45,7 +45,7 @@
       <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
-
+ -->
 
 
 

@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>CAMAIR.ac</path>
+
+<!--APU start-->
+
+
+
+
+  <animation>
+         <object-name>base</object-name>
+          <type>material</type>
+          <emission> 
+          <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+            <red>0.5</red>
+            <green>0.2</green>
+            <blue>0.2</blue>
+          </emission>
+  </animation> 
+
+
+<!--APU start-->
+
+<animation>
+        <type>knob</type>
+    <object-name>apu</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->
+
+        <axis>
+   <object-name>line1</object-name>
+        </axis>
+        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/electric/apustart</property>
+                <value>-1</value>
+                <value>0</value>
+                <value>1</value>             
+                <wrap>false</wrap>
+            </binding>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/electric/apustartpos</property>
+                <value>-1</value>
+                <value>0</value>
+                <value>1</value>             
+                <wrap>false</wrap>
+            </binding>
+
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>apustart</tooltip-id>
+                <label>APU Switch</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+
+
+ <animation>
+  <object-name>apu</object-name>
+  <type>rotate</type>
+  <property>controls/electric/apustartpos</property>
+  <factor>25</factor>
+  <offset-deg>25</offset-deg>
+  <axis>
+  <object-name>line1</object-name>
+  </axis>
+ </animation>
+
+
+
+<animation>
+        <type>knob</type>
+    <object-name>engcrank</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->
+
+        <axis>
+   <object-name>line2</object-name>
+        </axis>
+        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/electric/engcrank</property>
+                <value>-1</value>
+                <value>0</value>
+                <value>1</value>             
+                <wrap>false</wrap>
+            </binding>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/electric/engcrankpos</property>
+                <value>-1</value>
+                <value>0</value>
+                <value>1</value>             
+                <wrap>false</wrap>
+            </binding>
+
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>apustart</tooltip-id>
+                <label>Engine Start Switch</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+ <animation>
+  <object-name>engcrank</object-name>
+  <type>rotate</type>
+  <property>controls/electric/engcrank</property>
+  <factor>45</factor>
+  <offset-deg>45</offset-deg>
+  <axis>
+  <object-name>line2</object-name>
+  </axis>
+ </animation>
+
+
+
+
+
+<!--EPU-->
+
+<animation>
+        <type>knob</type>
+    <object-name>EPU</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->
+
+        <axis>
+   <object-name>line3</object-name>
+        </axis>
+        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/electric/EPU</property>
+                <value>0</value>
+                <value>1</value>
+                <value>2</value>             
+                
+                <value>3</value>             
+                <wrap>false</wrap>
+            </binding>
+
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>EPU</tooltip-id>
+                <label>Emergency Power Unit</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+ <animation>
+  <object-name>EPU</object-name>
+  <type>rotate</type>
+  <property>controls/electric/EPU</property>
+  <factor>55</factor>
+  <offset-deg>35</offset-deg>
+  <axis>
+  <object-name>line3</object-name>
+  </axis>
+ </animation>
+
+
+
+
+
+
+ 
+</PropertyList>

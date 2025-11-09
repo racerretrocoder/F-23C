@@ -2,11 +2,7 @@
 
 <PropertyList>
 
-<animation>
-  <type>range</type>
-  <min-m>0</min-m>
-  <max-m>100</max-m>
- </animation>
+
 
  <!-- Sticks & pedals-->
 <!-- FRONT -->
@@ -34,25 +30,6 @@
 
 
 
-
-
- 
-
-<!-- Instruments -->
-<!-- Front main dash -->
-
- <model>
- <name>compass</name>
-    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/comp/comp.xml</path>
-    <offsets>
-   <x-m> -4.60</x-m>
-<y-m> 0.102</y-m>
-<z-m> 1.15</z-m>
-<pitch-deg>0</pitch-deg>
-    </offsets>
-  </model>
-  
-  
    <model>
  <name>canopytext</name>
     <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/canopytext.xml</path>
@@ -86,6 +63,25 @@
     </offsets>
   </model>
   
+
+ 
+
+<!-- Instruments -->
+<!-- Front main dash 
+ <model>
+ <name>compass</name>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/comp/comp.xml</path>
+    <offsets>
+   <x-m> -4.60</x-m>
+<y-m> 0.102</y-m>
+<z-m> 1.15</z-m>
+<pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+
+
+  
+
   
   <model>
     <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/mfd/pages/map/map.xml</path>
@@ -139,7 +135,7 @@
 <pitch-deg>-8</pitch-deg>
 </offsets>
 <overlay>
-		 <animation n="100">
+		 <animation>
     <type>scale</type>
     <property>constants/zero</property>
     <x-offset>0.3</x-offset>
@@ -147,7 +143,7 @@
     <z-offset>1.21</z-offset>
    </animation>
   </overlay>
-</model>
+</model>  -->
 <!--
 <model>
 <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/HSI/hsi.xml</path>
@@ -158,7 +154,8 @@
 <pitch-deg>-8</pitch-deg>
 </offsets>
 </model>
--->
+--> 
+<!--
 <model>
 <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/altimeter/altimeter.xml</path>
 <offsets>
@@ -168,7 +165,7 @@
 <pitch-deg>-8</pitch-deg>
 </offsets>
 <overlay>
-		 <animation n="100">
+		 <animation>
     <type>scale</type>
     <property>constants/zero</property>
     <x-offset>0.3</x-offset>
@@ -189,7 +186,7 @@
 
 </offsets>
 <overlay>
-		 <animation n="100">
+		 <animation>
     <type>scale</type>
     <property>constants/zero</property>
     <x-offset>0.3</x-offset>
@@ -209,7 +206,7 @@
 <pitch-deg>-8</pitch-deg>
 </offsets>
 <overlay>
-		 <animation n="100">
+		 <animation>
     <type>scale</type>
     <property>constants/zero</property>
     <x-offset>0.3</x-offset>
@@ -229,7 +226,7 @@
 <pitch-deg>-8</pitch-deg>
 </offsets>
 <overlay>
-		 <animation n="100">
+		 <animation>
     <type>scale</type>
     <property>constants/zero</property>
     <x-offset>1</x-offset>
@@ -250,7 +247,7 @@
 <pitch-deg>-9</pitch-deg>
 </offsets>
 <overlay>
-		 <animation n="100">
+		 <animation>
     <type>scale</type>
     <property>constants/zero</property>
     <x-offset>0.3</x-offset>
@@ -271,7 +268,7 @@
 <pitch-deg>-9</pitch-deg>
 </offsets>
 <overlay>
-		 <animation n="100">
+		 <animation>
     <type>scale</type>
     <property>constants/zero</property>
     <x-offset>0.3</x-offset>
@@ -291,7 +288,7 @@
 <pitch-deg>-8</pitch-deg>
 </offsets>
 <overlay>
-		 <animation n="100">
+		 <animation>
     <type>scale</type>
     <property>constants/zero</property>
     <x-offset>1</x-offset>
@@ -310,7 +307,7 @@
 <pitch-deg>-8</pitch-deg>
 </offsets>
 <overlay>
-		 <animation n="100">
+		 <animation>
     <type>scale</type>
     <property>constants/zero</property>
     <x-offset>0.3</x-offset>
@@ -319,7 +316,7 @@
    </animation>
   </overlay>
 
-</model>
+</model>-->
 
 <model>
 <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/Landing-Gear/gearhandle.xml</path>
@@ -330,7 +327,7 @@
 <pitch-deg>-10</pitch-deg>
 </offsets>
 <overlay>
-		 <animation n="100">
+		 <animation>
     <type>scale</type>
     <property>constants/zero</property>
     <x-offset>1</x-offset>
@@ -360,7 +357,7 @@
 <pitch-deg>-3</pitch-deg>
 </offsets>
 <overlay>
-		 <animation n="100">
+		 <animation>
     <type>scale</type>
     <property>constants/zero</property>
     <x-offset>1</x-offset>
@@ -381,7 +378,7 @@
 <pitch-deg>-3</pitch-deg>
 </offsets>
 <overlay>
-		 <animation n="100">
+		 <animation>
     <type>scale</type>
     <property>constants/zero</property>
     <x-offset>1</x-offset>
@@ -401,15 +398,6 @@
       <z-m>0.75</z-m>
 <pitch-deg>-4</pitch-deg>
     </offsets>
-	<overlay>
-		 <animation n="100">
-    <type>scale</type>
-    <property>constants/zero</property>
-    <x-offset>1</x-offset>
-    <y-offset>1.02</y-offset>
-    <z-offset>1.05</z-offset>
-   </animation>
-  </overlay>
   </model>
 
 <model>
@@ -520,49 +508,6 @@
 
 </offsets>
 </model>
-
-<!-- rear Right -->
-
-<model>
-<path>Aircraft/F-23C/Models/Interior/Panel/Instruments/right.xml</path>
-<offsets>
-<x-m>3.6</x-m>
-<y-m>0.04</y-m>
-<z-m>0.196 </z-m>
-<pitch-deg>-3</pitch-deg>
-</offsets>
-<overlay>
-		 <animation n="100">
-    <type>scale</type>
-    <property>constants/zero</property>
-    <x-offset>1</x-offset>
-    <y-offset>0.45</y-offset>
-    <z-offset>1</z-offset>
-   </animation>
-  </overlay>
-</model>
-
-<!-- rear LEFT -->
-
-<model>
-<path>Aircraft/F-23C/Models/Interior/Panel/Instruments/left.xml</path>
-<offsets>
-<x-m>3.6</x-m>
-<y-m>-0.165</y-m>
-<z-m>0.205</z-m>
-<pitch-deg>-3</pitch-deg>
-</offsets>
-<overlay>
-		 <animation n="100">
-    <type>scale</type>
-    <property>constants/zero</property>
-    <x-offset>1</x-offset>
-    <y-offset>0.45</y-offset>
-    <z-offset>1</z-offset>
-   </animation>
-  </overlay>
-</model>
-
 </PropertyList>
 
 

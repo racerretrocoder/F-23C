@@ -51,6 +51,59 @@
   </axis>
  </animation>
 
+
+
+
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lever0</object-name>
+  <object-name>spbk-switch</object-name>
+  <object-name>spbk-opn</object-name>
+  <object-name>spbk-cls</object-name>
+  <object-name>finger-lift</object-name>
+  <property>controls/engines/engine/cutoff</property>
+  <interpolation>
+   <entry><ind> 0 </ind><dep>0</dep></entry>
+   <entry><ind> 1 </ind><dep>-8</dep></entry>
+  </interpolation>
+  <center>
+   <x-m> 0.148 </x-m>
+   <y-m> 0.130 </y-m>
+   <z-m> -0.138 </z-m>
+  </center>
+  <axis>
+   <x> 0 </x>
+   <y> -1 </y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>lever1</object-name>
+  <object-name>finger-lift1</object-name>
+  <property>controls/engines/engine[1]/cutoff</property>
+  <interpolation>
+   <entry><ind> 0 </ind><dep>0</dep></entry>
+   <entry><ind> 1 </ind><dep>-8</dep></entry>
+  </interpolation>
+  <center>
+   <x-m> 0.148 </x-m>
+   <y-m> 0.130 </y-m>
+   <z-m> -0.138 </z-m>
+  </center>
+  <axis>
+   <x> 0 </x>
+   <y> -1 </y>
+   <z> 0</z>
+  </axis>
+ </animation>
+
+
+
+
+
  <animation>
   <type>translate</type>
   <object-name>spbk-switch</object-name>
@@ -105,31 +158,16 @@
         <type>pick</type>
         <object-name>lever0</object-name>
         <action>
-            <button>3</button>
+            <button>0</button>
             <repeatable>true</repeatable>
             <binding>
-                <command>property-adjust</command>
-                <property>controls/engines/engine/throttle</property>
-                <step>0.1</step>
-                <min>0</min>
-                <max>1</max>
+                <command>property-toggle</command>
+                <property>controls/engines/engine/cutoff</property>
             </binding>
-        </action>
-    </animation>
-
-    <animation>
-        <type>pick</type>
-        <object-name>lever0</object-name>
-        <action>
-            <button>4</button>
-            <repeatable>true</repeatable>
-            <binding>
-                <command>property-adjust</command>
-                <property>controls/engines/engine/throttle</property>
-                <step>-0.1</step>
-                <min>0</min>
-                <max>1</max>
-            </binding>
+                              <binding>
+        <command>nasal</command>
+        <script>screen.log.write("Toggled Right Engine Cutoff");</script>
+      </binding>
         </action>
     </animation>
 
@@ -137,33 +175,20 @@
         <type>pick</type>
         <object-name>lever1</object-name>
         <action>
-            <button>3</button>
+            <button>0</button>
             <repeatable>true</repeatable>
             <binding>
-                <command>property-adjust</command>
-                <property>controls/engines/engine[1]/throttle</property>
-                <step>0.1</step>
-                <min>0</min>
-                <max>1</max>
+                <command>property-toggle</command>
+                <property>controls/engines/engine[1]/cutoff</property>
             </binding>
+                  <binding>
+        <command>nasal</command>
+        <script>screen.log.write("Toggled Left Engine Cutoff");</script>
+      </binding>
         </action>
     </animation>
 
-    <animation>
-        <type>pick</type>
-        <object-name>lever1</object-name>
-        <action>
-            <button>4</button>
-            <repeatable>true</repeatable>
-            <binding>
-                <command>property-adjust</command>
-                <property>controls/engines/engine[1]/throttle</property>
-                <step>-0.1</step>
-                <min>0</min>
-                <max>1</max>
-            </binding>
-        </action>
-    </animation>
+
 
 <!-- lighting -->
 

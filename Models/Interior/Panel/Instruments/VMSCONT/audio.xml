@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>audio.ac</path>
+  
+ 
+  <animation>
+ <object-name>base</object-name>
+   <type>material</type>
+     <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+
+ 
+  <animation>
+        <type>knob</type>
+    <object-name>vft</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/vms/vft</property>
+                <value>0</value>
+                <value>1</value>           
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen1</tooltip-id>
+                <label>This switch is not used. (Non Functional on the real YF-23)</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+
+
+ <animation>
+  <object-name>vft</object-name>
+  <type>rotate</type>
+  <property>/controls/vms/vft</property>
+  <factor>45</factor>
+  <offset-deg>0</offset-deg>
+  <axis>
+  <object-name>line2</object-name>
+  </axis>
+ </animation>
+
+
+
+  <animation>
+        <type>knob</type>
+    <object-name>vgs</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/vms/vgs</property>
+                <value>0</value>
+                <value>1</value>           
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen1</tooltip-id>
+                <label>Variable Gain Enable Switch</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+
+
+ <animation>
+  <object-name>vgs</object-name>
+  <type>rotate</type>
+  <property>/controls/vms/vgs</property>
+  <factor>45</factor>
+  <offset-deg>0</offset-deg>
+  <axis>
+  <object-name>line3</object-name>
+  </axis>
+ </animation>
+
+
+
+  <animation>
+        <type>knob</type>
+    <object-name>gain</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/vms/gain</property>
+                <value>0</value>
+                <value>1</value> 
+                <value>2</value>           
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen1</tooltip-id>
+                <label>Fixed Gain Switch</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+
+
+ <animation>
+  <object-name>gain</object-name>
+  <type>rotate</type>
+  <property>/controls/vms/gain</property>
+  <factor>45</factor>
+  <offset-deg>0</offset-deg>
+  <axis>
+  <object-name>line3</object-name>
+  </axis>
+ </animation>
+
+
+
+
+  <animation>
+        <type>knob</type>
+    <object-name>bit</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/vms/bit</property>
+                <value>0</value>
+                <value>1</value>       
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen1</tooltip-id>
+                <label>Built In Test Consent Switch</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+
+
+ <animation>
+  <object-name>bit</object-name>
+  <type>rotate</type>
+  <property>/controls/vms/bit</property>
+  <factor>45</factor>
+  <offset-deg>0</offset-deg>
+  <axis>
+  <object-name>line2</object-name>
+  </axis>
+ </animation>
+
+
+
+
+  <animation>
+        <type>knob</type>
+    <object-name>flap</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/vms/flap</property>
+                <value>0</value>
+                <value>1</value>  
+                <value>2</value>       
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen1</tooltip-id>
+                <label>Flap Emergency Switch</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+
+
+ <animation>
+  <object-name>flap</object-name>
+  <type>rotate</type>
+  <property>/controls/vms/flap</property>
+  <factor>45</factor>
+  <offset-deg>0</offset-deg>
+  <axis>
+  <object-name>line2</object-name>
+  </axis>
+ </animation>
+
+
+
+
+  <animation>
+        <type>knob</type>
+    <object-name>vmseng</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/vms/vmseng</property>
+                <value>0</value>
+                <value>1</value>  
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen1</tooltip-id>
+                <label>VMS/ENGINE Reset Switch</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>VMS.engineresetTimer.start();</script>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+
+
+ <animation>
+  <object-name>vmseng</object-name>
+  <type>rotate</type>
+  <property>/controls/vms/vmseng</property>
+  <factor>45</factor>
+  <offset-deg>0</offset-deg>
+  <axis>
+  <object-name>line0</object-name>
+  </axis>
+ </animation>
+
+
+
+
+  <animation>
+        <type>knob</type>
+    <object-name>oride</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/FBW/Switch</property>
+                <value>0</value>
+                <value>1</value>  
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen1</tooltip-id>
+                <label>VMS Flight Control Override Switch</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+
+
+ <animation>
+  <object-name>oride</object-name>
+  <type>rotate</type>
+  <property>/controls/FBW/Switch</property>
+  <factor>45</factor>
+  <offset-deg>0</offset-deg>
+  <axis>
+  <object-name>line1</object-name>
+  </axis>
+ </animation>
+
+
+
+
+   
+</PropertyList>
+
+

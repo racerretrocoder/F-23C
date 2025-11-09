@@ -344,6 +344,203 @@ if (calt > talt) {
 }
 
 
+
+#
+# APU Startup Sequencing
+#
+
+
+# play sound
+# first open flaps
+setprop("controls/apu/run",0);
+var apuseq1 = func() {
+  # APU Animation/sequence !
+  setprop("controls/apu/start",1);
+  setprop("controls/apu/flap",1);
+  seq2timer.start();
+}
+
+var apuseq2 = func() {
+  # APU Animation/sequence !
+  setprop("controls/apu/start",1);
+  seq2timer.stop();
+  seq3timer.start();
+}
+
+var apuseq3 = func() {
+  # APU Animation/sequence !
+  setprop("controls/apu/smokespeed",10);
+  setprop("controls/apu/smoke",1);
+  seq3timer.stop();
+  seq4timer.start();
+}
+
+var apuseq4 = func() {
+  # APU Animation/sequence !
+  setprop("controls/apu/smoke",0);
+  setprop("controls/apu/apuflame",1);
+  seq4timer.stop();
+  seq5timer.start();
+}
+
+var apuseq5 = func() {
+  # APU Animation/sequence !
+  setprop("controls/apu/smoke",1);
+  setprop("controls/apu/apuflame",0);
+  setprop("controls/apu/smoke",0);
+  seq5timer.stop();
+  seq6timer.start();
+}
+
+var apuseq6 = func() {
+  # APU Animation/sequence !
+  setprop("controls/apu/smoke",1);
+  seq6timer.stop();
+  seq7timer.start();
+}
+var apuseq7 = func() {
+  # APU Animation/sequence !
+  setprop("controls/apu/smoke",0);
+  seq7timer.stop();
+  seq8timer.start();
+}
+var apuseq8 = func() {
+  # APU Animation/sequence !
+  setprop("controls/apu/run",1);
+  setprop("controls/electric/apustart",0); # Return to run
+  setprop("controls/electric/apustartpos",0); # Return to run
+  setprop("controls/apu/start",0);
+  #apuon();
+  seq8timer.stop();
+  #seq8timer.start();
+}
+
+var apushutoffmain = func() {
+  # APU Animation/sequence !
+  setprop("controls/apu/startinprogress",0);
+  setprop("controls/apu/run",0);
+
+  setprop("controls/apu/spooldown",1);
+  offtimer.start();
+  #seq8timer.start();
+}
+
+var apushutoff = func() {
+  # APU Animation/sequence !
+  setprop("controls/apu/spooldown",2); # Stop the sound
+  setprop("controls/apu/flap",0); # Close the flaps
+  offtimer.stop();
+  #seq8timer.start();
+}
+
+# Timers
+
+seq2timer = maketimer(0.3,apuseq2);
+seq3timer = maketimer(0.4,apuseq3);
+seq4timer = maketimer(0.5,apuseq4);
+seq5timer = maketimer(0.5,apuseq5);
+seq6timer = maketimer(2,apuseq6);
+seq7timer = maketimer(0.5,apuseq7);
+seq8timer = maketimer(10,apuseq8);
+offtimer = maketimer(16,apushutoff);
+#apudoortimer = maketimer(, apuseq1);
+
+setprop("controls/apu/startinprogress",0);
+
+
+# Electric system for the engines and the APU:
+
+# Detect the status of the main power switch. then check if the engines are dead. 
+# if all's good. start the engines
+# Controls the battery switch, APU, and Engine start switches and there effectiveness (If they work or not)
+
+var engloop = func{
+setprop("sim/multiplay/visibility-range-nm",2000); # Going to put this here because smh the -set dosent set it to be 1000
+
+
+if (getprop("controls/engines/engine/throttle") > 0.5) {
+  print("APU Spring off");
+  setprop("controls/electric/apustartpos",-1);
+  setprop("controls/electric/apustart",-1);
+}
+
+
+var starter = getprop("controls/electric/engcrank");
+if (starter == 1) {
+  var jfsr = 1;
+  var jfsl = 0;
+  print("CRANK: Right");
+}
+if (starter == 0) {
+  var jfsr = 0;
+  var jfsl = 0;
+}
+if (starter == -1) {
+  var jfsr = 0;
+  var jfsl = 1;
+  print("CRANK: Left");
+}
+
+var bat = getprop("controls/electric/battswitch");
+#print("In ENGINE LOOP!");
+            if(getprop("controls/electric/battswitch") >= 1) {
+                # check the APU the apu
+                if(getprop("/controls/apu/startinprogress") == 0) {
+
+                if(getprop("/controls/electric/apustart") == 1) {
+                      # Start the APU
+                      print("starting APU!");
+                      apuseq1();
+                      setprop("controls/apu/startinprogress",1);
+                }
+              }
+                if(getprop("/controls/apu/startinprogress") == 1) {
+
+                if(getprop("/controls/electric/apustart") == -1) {
+                      # Stop the APU
+                      print("stopping APU!");
+                      apushutoffmain();
+#setprop("controls/apu/startinprogress",1);
+                }
+              }
+              if(getprop("/engines/engine/n1") < 28) {
+              setprop("/controls/engines/engine/starter",jfsr);
+              print("eng1 rebound disarmed");
+            }
+
+            if(getprop("/engines/engine[1]/n1") < 28) {
+              setprop("/controls/engines/engine[1]/starter",jfsl);
+              print("eng2 rebound disarmed");
+            } 
+
+
+
+            if(getprop("/engines/engine/n1") > 28) {
+              # Rebound the switches when its good
+              setprop("controls/electric/engine/start-r",getprop("/controls/engines/engine/starter"));
+              if (jfsr == 1) {
+                setprop("controls/electric/engcrank",0);
+                setprop("controls/electric/engcrankpos",0);
+              }
+              #print("eng1 rebound armed");
+            }
+
+            if(getprop("/engines/engine[1]/n1") > 28) {
+
+              # Rebound the switches when its good
+              setprop("controls/electric/engine/start-l",getprop("/controls/engines/engine[1]/starter"));
+              if (jfsl == 1) {
+                setprop("controls/electric/engcrank",0);
+                setprop("controls/electric/engcrankpos",0);
+              }
+              #print("eng2 rebound armed");
+            } 
+
+            }
+}
+
+
+
 # reinit previous flight params
 #var aglreinit = func {
 #var terflw = getprop("controls/switches/terrain-follow");
@@ -357,3 +554,10 @@ if (calt > talt) {
 #}
 ### end of terrain avoidance behaviour #########################
 
+
+timer_eng = maketimer(0.25, engloop);
+
+setlistener("sim/signals/fdm-initialized", func {
+# Spawned in/went to location
+timer_eng.start();
+});

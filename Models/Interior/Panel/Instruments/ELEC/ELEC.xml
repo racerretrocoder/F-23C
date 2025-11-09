@@ -4,11 +4,7 @@
 
     <path>ELEC.ac</path>
 
-    <animation>
-	<type>range</type>
-	<min-m>0</min-m>
-	<max-m>10</max-m>
-    </animation>
+
  
   <animation>
          <object-name>base</object-name>
@@ -33,6 +29,213 @@
         <blue> 0.4 </blue>
      </emission>
   </animation> 
+
+
+
+
+
+
+
+<animation>
+        <type>knob</type>
+    <object-name>gen1</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/electric/gen1</property>
+                <value>0</value>
+                <value>1</value>           
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen1</tooltip-id>
+                <label>Generator 1</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+
+
+ <animation>
+  <object-name>gen1</object-name>
+  <type>rotate</type>
+  <property>/controls/electric/gen1</property>
+  <factor>25</factor>
+  <offset-deg>0</offset-deg>
+  <axis>
+  <object-name>line</object-name>
+  </axis>
+ </animation>
+
+
+
+
+
+
+<animation>
+        <type>knob</type>
+    <object-name>gen2</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/electric/gen2</property>
+                <value>0</value>
+                <value>1</value>           
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen1</tooltip-id>
+                <label>Generator 2</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+
+
+ <animation>
+  <object-name>gen2</object-name>
+  <type>rotate</type>
+  <property>/controls/electric/gen2</property>
+  <factor>25</factor>
+  <offset-deg>0</offset-deg>
+  <axis>
+  <object-name>line</object-name>
+  </axis>
+ </animation>
+
+
+
+<animation>
+        <type>knob</type>
+    <object-name>vms1</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/electric/vms1</property>
+                <value>0</value>
+                <value>1</value>           
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen1</tooltip-id>
+                <label>VMS 1 Power</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+
+
+ <animation>
+  <object-name>vms1</object-name>
+  <type>rotate</type>
+  <property>/controls/electric/vms1</property>
+  <factor>25</factor>
+  <offset-deg>0</offset-deg>
+  <axis>
+  <object-name>line1</object-name>
+  </axis>
+ </animation>
+
+ 
+ <animation>
+        <type>knob</type>
+    <object-name>vms2</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/electric/vms2</property>
+                <value>0</value>
+                <value>1</value>           
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen1</tooltip-id>
+                <label>VMS 2 Power</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+
+
+ <animation>
+  <object-name>vms2</object-name>
+  <type>rotate</type>
+  <property>/controls/electric/vms2</property>
+  <factor>25</factor>
+  <offset-deg>0</offset-deg>
+  <axis>
+  <object-name>line1</object-name>
+  </axis>
+ </animation>
+
 
 
 </PropertyList>

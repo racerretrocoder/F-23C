@@ -2,11 +2,7 @@
 
 <PropertyList>
 
-<animation>
-  <type>range</type>
-  <min-m>0</min-m>
-  <max-m>500</max-m>
- </animation>
+
 
 	<effect>
       <inherits-from>Effects/model-transparent</inherits-from>

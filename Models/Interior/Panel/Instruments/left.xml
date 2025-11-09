@@ -3,9 +3,9 @@
 <PropertyList>
 
 
-<!-- TACAN  -->
+<!-- BRAKE CONTROLS  -->
   <model>
-    <path>Aircraft/F-15-ACTIVE/Models/Interior/Panel/Instruments/tacan/tacan.xml</path>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/tacan/tacan.xml</path>
     <offsets>
       <x-m> -6.590 </x-m>
       <y-m> -0.365 </y-m>
@@ -17,9 +17,9 @@
   </model>
 
 
-<!-- CAS  -->
+<!-- CAS 
   <model>
-    <path>Aircraft/F-15-ACTIVE/Models/Interior/Panel/Instruments/cas/cas.xml</path>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/cas/cas.xml</path>
     <offsets>
       <x-m> -6.497 </x-m>
       <y-m> -0.365 </y-m>
@@ -28,12 +28,12 @@
       <pitch-deg> -87 </pitch-deg>
       <heading-deg> 0 </heading-deg>
     </offsets>
-  </model>
+  </model> -->
 
 
-<!-- MISC  -->
+<!-- GND PWR -->
   <model>
-    <path>Aircraft/F-15-ACTIVE/Models/Interior/Panel/Instruments/misc/misc.xml</path>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/misc/misc.xml</path>
     <offsets>
       <x-m> -6.547 </x-m>
       <y-m> -0.524 </y-m>
@@ -48,11 +48,11 @@
 <!-- thrust-lever -->
 
   <model>
-    <path>Aircraft/F-15-ACTIVE/Models/Interior/Panel/Instruments/power_lever/power_lever.xml</path>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/power_lever/power_lever.xml</path>
     <offsets>
-      <x-m> -6.467 </x-m>
+      <x-m> -6.557 </x-m>
       <y-m> -0.444 </y-m>
-      <z-m> 0.529</z-m>
+      <z-m> 0.539</z-m>
       <roll-deg> -8.5 </roll-deg>
       <pitch-deg> 3 </pitch-deg>
       <heading-deg> 0.5 </heading-deg>
@@ -60,10 +60,10 @@
   </model>
 
 
-<!-- RUD-TRIM -->
+<!-- RUD-TRIM 
 
   <model>
-    <path>Aircraft/F-15-ACTIVE/Models/Interior/Panel/Instruments/rud_trim/rud_trim.xml</path>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/rud_trim/rud_trim.xml</path>
     <offsets>
       <x-m> -6.215 </x-m>
       <y-m> -0.310 </y-m>
@@ -72,12 +72,12 @@
       <pitch-deg> -8.5 </pitch-deg>
       <heading-deg> -90 </heading-deg>
     </offsets>
-  </model>
+  </model>-->
 
 
 <!-- fuel  -->
   <model>
-    <path>Aircraft/F-15-ACTIVE/Models/Interior/Panel/Instruments/fuel/fuel.xml</path>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/fuel/fuel.xml</path>
     <offsets>
       <x-m> -6.421 </x-m>
       <y-m> -0.525 </y-m>
@@ -89,9 +89,9 @@
   </model>
 
 
-<!-- EXT-LT -->
+<!-- EXT-LT
   <model>
-    <path>Aircraft/F-15-ACTIVE/Models/Interior/Panel/Instruments/EXT-LT/Ext-LT.xml</path>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/EXT-LT/Ext-LT.xml</path>
     <offsets>
       <x-m> -6.198 </x-m>
       <y-m> -0.365 </y-m>
@@ -100,16 +100,16 @@
       <pitch-deg> -87 </pitch-deg>
       <heading-deg> 0 </heading-deg>
     </offsets>
-  </model>
+  </model>  -->
 
 
-<!-- AUDIO -->
+<!-- VMSCONT -->
   <model>
-    <path>Aircraft/F-15-ACTIVE/Models/Interior/Panel/Instruments/audio/audio.xml</path>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/VMSCONT/audio.xml</path>
     <offsets>
-      <x-m> -6.137 </x-m>
+      <x-m> -6.287 </x-m>
       <y-m> -0.365 </y-m>
-      <z-m> 0.499</z-m>
+      <z-m> 0.507</z-m>
       <roll-deg> -8.4 </roll-deg>
       <pitch-deg> -87 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -117,24 +117,40 @@
   </model>
 
 
-<!-- RADER -->
+<!-- LIGHTS -->
   <model>
-    <path>Aircraft/F-15-ACTIVE/Models/Interior/Panel/Instruments/rader/rader.xml</path>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/LTS/LTS.xml</path>
     <offsets>
-      <x-m> -6.361 </x-m>
+      <x-m> -6.331 </x-m>
       <y-m> -0.524 </y-m>
       <z-m> 0.537</z-m>
       <roll-deg> -8.4 </roll-deg>
       <pitch-deg> -87 </pitch-deg>
       <heading-deg> 0 </heading-deg>
     </offsets>
-  </model>
+  </model> 
+
+
+
+<!-- CAMAIR -->
+  <model>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/CAMAIR/CAMAIR.xml</path>
+    <offsets>
+      <x-m> -6.231 </x-m>
+      <y-m> -0.524 </y-m>
+      <z-m> 0.537</z-m>
+      <roll-deg> -8.4 </roll-deg>
+      <pitch-deg> -87 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model> 
+
 
 
 <!-- SPACER -->
-  <!-- LH -->
+  <!-- LH 
   <model>
-    <path>Aircraft/F-15-ACTIVE/Models/Interior/Panel/Instruments/spacer/spacer.xml</path>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/spacer/spacer.xml</path>
     <offsets>
       <x-m> -6.151 </x-m>
       <y-m> -0.524 </y-m>
@@ -143,10 +159,10 @@
       <pitch-deg> -87 </pitch-deg>
       <heading-deg> 0 </heading-deg>
     </offsets>
-  </model>
+  </model>-->
 
   <model>
-    <path>Aircraft/F-15-ACTIVE/Models/Interior/Panel/Instruments/spacer/spacer2.xml</path>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/spacer/spacer2.xml</path>
     <offsets>
       <x-m> -5.927 </x-m>
       <y-m> -0.367 </y-m>
@@ -164,7 +180,7 @@
 
 <!-- IFF -->
   <model>
-    <path>Aircraft/F-15-ACTIVE/Models/Interior/Panel/Instruments/IFF/IFF.xml</path>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/IFF/IFF.xml</path>
     <offsets>
       <x-m> -6.075 </x-m>
       <y-m> -0.525 </y-m>
@@ -178,7 +194,7 @@
 
 <!-- AAI -->
   <model>
-    <path>Aircraft/F-15-ACTIVE/Models/Interior/Panel/Instruments/AAI/AAI.xml</path>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/AAI/AAI.xml</path>
     <offsets>
       <x-m> -6.028 </x-m>
       <y-m> -0.525 </y-m>
@@ -196,7 +212,7 @@
 
 <!-- BIT -->
   <model>
-    <path>Aircraft/F-15-ACTIVE/Models/Interior/Panel/Instruments/BIT/BIT.xml</path>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/BIT/BIT.xml</path>
     <offsets>
       <x-m> -5.858 </x-m>
       <y-m> -0.527 </y-m>
