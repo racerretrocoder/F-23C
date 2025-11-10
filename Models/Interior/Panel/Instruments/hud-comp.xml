@@ -42,8 +42,12 @@
    <pitch-deg>21</pitch-deg>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
-  <type type="string">literal</type>
-  <text type="string">COM1</text>
+
+   <type type="string">string</type>
+   <format type="string">%s</format>
+  <truncate type="bool">true</truncate>
+  <property>COMP/text1</property>
+
   <draw-text type="bool">true</draw-text>
   <alignment>left-top</alignment>
  </text>
@@ -59,10 +63,11 @@
    <pitch-deg>21</pitch-deg>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
-  <type type="string">number-value</type>
-  <format type="string">%3.3f</format>
-  <truncate type="bool">false</truncate>
-  <property>instrumentation/comm/frequencies/selected-mhz</property>
+   <type type="string">string</type>
+   <format type="string">%s</format>
+  <truncate type="bool">true</truncate>
+  <property>COMP/text2</property>
+
   <draw-text type="bool">true</draw-text>
   <alignment>right-top</alignment>
  </text>
@@ -78,8 +83,11 @@
    <pitch-deg>21</pitch-deg>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
-  <type type="string">literal</type>
-  <text type="string">COM2</text>
+   <type type="string">string</type>
+   <format type="string">%s</format>
+  <truncate type="bool">true</truncate>
+  <property>COMP/text3</property>
+
   <draw-text type="bool">true</draw-text>
   <alignment>left-top</alignment>
  </text>
@@ -95,10 +103,11 @@
    <pitch-deg>21</pitch-deg>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
-  <type type="string">number-value</type>
-  <format type="string">%3.3f</format>
-  <truncate type="bool">false</truncate>
-  <property>instrumentation/comm[1]/frequencies/selected-mhz</property>
+   <type type="string">string</type>
+   <format type="string">%s</format>
+  <truncate type="bool">true</truncate>
+  <property>COMP/text4</property>
+
   <draw-text type="bool">true</draw-text>
   <alignment>right-top</alignment>
  </text>
@@ -114,8 +123,11 @@
    <pitch-deg>21</pitch-deg>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
-  <type type="string">literal</type>
-  <text type="string">NAV1</text>
+   <type type="string">string</type>
+   <format type="string">%s</format>
+  <truncate type="bool">true</truncate>
+  <property>COMP/text5</property>
+
   <draw-text type="bool">true</draw-text>
   <alignment>left-top</alignment>
  </text>
@@ -131,10 +143,11 @@
    <pitch-deg>21</pitch-deg>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
-  <type type="string">number-value</type>
-  <format type="string">%3.3f</format>
-  <truncate type="bool">false</truncate>
-  <property>instrumentation/nav/frequencies/selected-mhz</property>
+   <type type="string">string</type>
+   <format type="string">%s</format>
+  <truncate type="bool">true</truncate>
+  <property>COMP/text6</property>
+
   <draw-text type="bool">true</draw-text>
   <alignment>right-top</alignment>
  </text>
@@ -150,8 +163,11 @@
    <pitch-deg>21</pitch-deg>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
-  <type type="string">literal</type>
-  <text type="string">NAV2</text>
+   <type type="string">string</type>
+   <format type="string">%s</format>
+  <truncate type="bool">true</truncate>
+  <property>COMP/text7</property>
+
   <draw-text type="bool">true</draw-text>
   <alignment>left-top</alignment>
  </text>
@@ -167,14 +183,94 @@
    <pitch-deg>21</pitch-deg>
   </offsets>
   <axis-alignment>yz-plane</axis-alignment>
-  <type type="string">number-value</type>
-  <format type="string">%3.3f</format>
-  <truncate type="bool">false</truncate>
-  <property>instrumentation/nav[1]/frequencies/selected-mhz</property>
+   <type type="string">string</type>
+   <format type="string">%s</format>
+  <truncate type="bool">true</truncate>
+  <property>COMP/text8</property>
+
   <draw-text type="bool">true</draw-text>
   <alignment>right-top</alignment>
  </text>
 
+ <text>
+  <name>nav2</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+    <x-m>-4.688</x-m>
+    <y-m>-0.085</y-m>
+    <z-m>0.816</z-m>
+   <pitch-deg>21</pitch-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+   <type type="string">string</type>
+   <format type="string">%s</format>
+  <truncate type="bool">true</truncate>
+  <property>COMP/text9</property>
+
+  <draw-text type="bool">true</draw-text>
+  <alignment>right-top</alignment>
+ </text>
+ <text>
+  <name>nav2</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+    <x-m>-4.688</x-m>
+    <y-m>-0.03</y-m>
+    <z-m>0.816</z-m>
+   <pitch-deg>21</pitch-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+   <type type="string">string</type>
+   <format type="string">%s</format>
+  <truncate type="bool">true</truncate>
+  <property>COMP/text10</property>
+
+  <draw-text type="bool">true</draw-text>
+  <alignment>right-top</alignment>
+ </text>
+
+
+ <text>
+  <name>nav2</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+    <x-m>-4.688</x-m>
+    <y-m>-0.082</y-m>
+    <z-m>0.803</z-m>
+   <pitch-deg>21</pitch-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+   <type type="string">string</type>
+   <format type="string">%s</format>
+  <truncate type="bool">true</truncate>
+  <property>COMP/text11</property>
+
+  <draw-text type="bool">true</draw-text>
+  <alignment>right-top</alignment>
+ </text>
+
+ <text>
+  <name>nav2</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+    <x-m>-4.688</x-m>
+    <y-m>-0.03</y-m>
+    <z-m>0.803</z-m>
+   <pitch-deg>21</pitch-deg>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+   <type type="string">string</type>
+   <format type="string">%s</format>
+  <truncate type="bool">true</truncate>
+  <property>COMP/text12</property>
+
+  <draw-text type="bool">true</draw-text>
+  <alignment>right-top</alignment>
+ </text>
 
 </PropertyList>
 

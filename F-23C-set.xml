@@ -789,8 +789,42 @@ NR/MD F-23Csimulation config.
 	  </scenario>
   </ai>
   
+<COMP>
+<text1 type="string"></text1>
+<text2 type="string"></text2>
+<text3 type="string"></text3>
+<text4 type="string"></text4>
+<text5 type="string"></text5>
+<text6 type="string"></text6>
+<text7 type="string"></text7>
+<text8 type="string"></text8>
+<text9 type="string"></text9>
+<text10 type="string"></text10>
+<text11 type="string"></text11>
+<text12 type="string"></text12>
+<menu type="int">0</menu>
+</COMP>
+
+
+
+
+
+
+
 <!-- Start with the Parking Brake on -->
  <controls>
+
+<MPCD>
+<Lbit type="int">0</Lbit>
+<Rbit type="int">0</Rbit>
+<Rpage type="int">0</Rpage>
+<Lpage type="int">0</Lpage>
+<Rpower type="int">0</Rpower>
+<Lpower type="int">0</Lpower>
+
+</MPCD>
+
+
 <vms>
 <bit type="int">0</bit>
 <vft type="int">0</vft>
@@ -800,10 +834,11 @@ NR/MD F-23Csimulation config.
 </vms>
 
  <electric>
-		<battswitch type="int">1</battswitch> <!--0 OFF 1 Backup 2 Main Power-->
+		<battswitch type="int">0</battswitch> <!--0 OFF 1 ON-->
     <EPUswitch type="int">0</EPUswitch> <!--0 OFF 1 Active-->
     <controls type="int">1</controls> 
-
+    <emergen type="int">0</emergen> 
+    <emerbatt type="int">0</emerbatt> 
      <MFD type="int">0</MFD>
 <computer type="int">1</computer>
      <SMS type="int">0</SMS> 
@@ -817,6 +852,8 @@ NR/MD F-23Csimulation config.
 <EPU type="int">0</EPU>
 <gen1 type="int">0</gen1>
 <gen2 type="int">0</gen2>
+<vms1 type="int">0</vms1>
+<vms2 type="int">0</vms2>
 <apustartpos type="int">-1</apustartpos>
 <apustart type="int">-1</apustart>  
 <engcrank type="int">0</engcrank>
@@ -1482,12 +1519,12 @@ NR/MD F-23Csimulation config.
 		</flight>
 
 
-        <drone>
-      <file>Aircraft/F-23C/Nasal/drone.nas</file>
-    </drone>
-    <aitrack>
-      <file>Aircraft/F-23C/Nasal/AI.nas</file>
-    </aitrack>
+    <COMP>
+      <file>Aircraft/F-23C/Nasal/COMP.nas</file>
+    </COMP>
+    <MPCD>
+      <file>Aircraft/F-23C/Nasal/MPCD.nas</file>
+    </MPCD>
 </nasal>
 
 </PropertyList>

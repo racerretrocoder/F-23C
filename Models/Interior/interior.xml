@@ -79,6 +79,811 @@
     </offsets>
   </model>
 
+
+
+
+
+
+
+
+  <animation>
+	 <type>select</type>
+	 <object-name>LBIT</object-name>
+	 <condition>   
+			 <equals>
+				 <property>controls/MPCD/Lbit</property>
+				 <value>1</value>
+			 </equals>
+	 </condition>
+ </animation>
+
+ 
+  <animation>
+	 <type>select</type>
+	 <object-name>RBIT</object-name>
+	 <condition>   
+			 <equals>
+				 <property>controls/MPCD/Rbit</property>
+				 <value>1</value>
+			 </equals>
+	 </condition>
+ </animation>
+
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>RON</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.Rpower();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>R1</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R1();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>R2</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R2();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>R3</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R3();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>R4</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R4();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>R5</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R5();</script>
+      </binding>
+        </action>
+    </animation>
+    <animation>
+        <type>pick</type>
+        <object-name>R6</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R6();</script>
+      </binding>
+        </action>
+    </animation>
+    <animation>
+        <type>pick</type>
+        <object-name>R7</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R7();</script>
+      </binding>
+        </action>
+    </animation>
+    <animation>
+        <type>pick</type>
+        <object-name>R8</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R8();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>R9</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R9();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>R10</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R10();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>R11</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R11();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>R12</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R12();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>R13</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R13();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>R14</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R14();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>R16</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R16();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>R15</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R15();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>R17</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R17();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>R18</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R18();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>R19</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R19();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>R20</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.R20();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>L1</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L1();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>L2</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L2();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>L3</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L3();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>L4</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L4();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>L5</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L5();</script>
+      </binding>
+        </action>
+    </animation>
+    <animation>
+        <type>pick</type>
+        <object-name>L6</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L6();</script>
+      </binding>
+        </action>
+    </animation>
+    <animation>
+        <type>pick</type>
+        <object-name>L7</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L7();</script>
+      </binding>
+        </action>
+    </animation>
+    <animation>
+        <type>pick</type>
+        <object-name>L8</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L8();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>L9</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L9();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>L10</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L10();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>L11</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L11();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>L12</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L12();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>L13</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L13();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>L14</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L14();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>L15</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L15();</script>
+      </binding>
+        </action>
+    </animation>
+    <animation>
+        <type>pick</type>
+        <object-name>L16</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L16();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>L17</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L17();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>L18</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L18();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>L19</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L19();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>L20</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>MPCD.L20();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>LON</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+     <binding>
+        <command>nasal</command>
+        <script>MPCD.Lpower();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+<!--Front controls-->
+
+    <animation>
+        <type>pick</type>
+        <object-name>UR1</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>COMP.UR1();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>UR2</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>COMP.UR2();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>UR3</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>COMP.UR3();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>UR4</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>COMP.UR4();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>UR5</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>COMP.UR5();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>UL1</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>COMP.UL1();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>UL2</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>COMP.UL2();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>UL3</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>COMP.UL3();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>UL4</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>COMP.UL4();</script>
+      </binding>
+        </action>
+    </animation>
+
+
+
+    <animation>
+        <type>pick</type>
+        <object-name>UL5</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>COMP.UL5();</script>
+      </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>MENU</object-name>
+        <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+
+                              <binding>
+        <command>nasal</command>
+        <script>setprop("COMP/menu",1);</script>
+      </binding>
+        </action>
+    </animation>
+
+
+
+
   <!-- Hud Computer data    -->
   <!--
   <animation>

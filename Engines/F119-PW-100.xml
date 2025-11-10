@@ -15,7 +15,7 @@
   <maxthrust> 39000.0 </maxthrust>
   <bypassratio>     1 </bypassratio>
   <tsfc>            0.8 </tsfc>
-  <atsfc>           1.7 </atsfc>
+  <atsfc>           1.0 </atsfc>
   <bleed>           0.03</bleed>
   <n1spinup>        0.5 </n1spinup>
   <n2spinup>        1.0 </n2spinup>

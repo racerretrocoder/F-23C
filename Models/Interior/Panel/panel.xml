@@ -62,6 +62,35 @@
       <pitch-deg>0</pitch-deg>
     </offsets>
   </model>
+
+
+<!--Right MPCD-->
+   <model>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/MPCD/right.xml</path>
+    <offsets>
+   <x-m> -4.813</x-m>
+<y-m> 0.13</y-m>
+<z-m> 0.73 </z-m>
+<pitch-deg>-12</pitch-deg>
+    </offsets>
+  </model>
+  
+
+
+<!--Left MPCD-->
+  <model>
+    <path>Aircraft/F-23C/Models/Interior/Panel/Instruments/MPCD/left.xml</path>
+    <offsets>
+   <x-m> -4.82</x-m>
+<y-m> -0.245</y-m>
+<z-m> 0.73 </z-m>
+<pitch-deg>-12</pitch-deg>
+    </offsets>
+  </model>
+  
+  
+
+
   
 
  

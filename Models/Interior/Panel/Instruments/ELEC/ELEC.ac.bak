@@ -2,7 +2,21 @@ AC3Db
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
 MATERIAL "DefaultWhite.001" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
 OBJECT world
-kids 17
+kids 18
+OBJECT poly
+name "lineemer"
+loc 0 -0.011436 -0.0496162
+crease 45.000000
+numvert 2
+0 0 -0.00631449
+0 0 0.00631449
+numsurf 1
+SURF 0x32
+mat 0
+refs 2
+1 0 0
+0 1 0
+kids 0
 OBJECT poly
 name "line1"
 loc 0 -0.0474702 0.041065
@@ -2029,7 +2043,7 @@ refs 4
 240 0.62374 0.0303503
 kids 0
 OBJECT poly
-name "ext-pwr"
+name "vms1"
 loc -0.00386868 0.0191996 0.0240911
 data 10
 Sphere.011
@@ -8948,7 +8962,7 @@ refs 4
 304 0.487229 0.0383419
 kids 0
 OBJECT poly
-name "ext-pwr"
+name "vms2"
 loc -0.00386868 0.0187139 -0.00504796
 data 10
 Sphere.011
@@ -22786,7 +22800,7 @@ refs 4
 304 0.487229 0.0383419
 kids 0
 OBJECT poly
-name "ext-pwr"
+name "util"
 loc -0.00386868 0.0184711 -0.0710964
 data 10
 Sphere.011
@@ -29705,7 +29719,7 @@ refs 4
 240 0.62374 0.0303503
 kids 0
 OBJECT poly
-name "ext-pwr"
+name "emer"
 loc -0.00386868 0.0556234 -0.0657543
 data 10
 Sphere.011

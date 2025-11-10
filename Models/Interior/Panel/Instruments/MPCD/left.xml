@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+  <model>
+  <name>off</name>
+    <path>screenoff.ac</path>
+  </model>
+
+  <model>
+  <name>menu</name>
+    <path>menu.xml</path>
+  </model>
+  <model>
+  <name>engine</name>
+    <path>engine.xml</path>
+  </model>
+
+
+  <animation>
+	 <type>select</type>
+	 <object-name>off</object-name>
+	 <condition>   
+			 <equals>
+				 <property>controls/MPCD/Lpower</property>
+				 <value>0</value>
+			 </equals>
+	 </condition>
+ </animation>
+ 
+   <animation>
+	 <type>select</type>
+	 <object-name>menu</object-name>
+	 <condition>   
+        <and>
+			 <equals>
+				 <property>controls/MPCD/Lpower</property>
+				 <value>1</value>
+			 </equals>
+			 <equals>
+				 <property>controls/MPCD/Lpage</property>
+				 <value>0</value>
+			 </equals>
+			 <equals>
+				 <property>controls/MPCD/Lbit</property>
+				 <value>0</value>
+			 </equals>
+        </and>
+	 </condition>
+ </animation>
+  
+  <animation>
+	 <type>select</type>
+	 <object-name>engine</object-name>
+	 <condition>   
+        <and>
+			 <equals>
+				 <property>controls/MPCD/Lpower</property>
+				 <value>1</value>
+			 </equals>
+			 <equals>
+				 <property>controls/MPCD/Lpage</property>
+				 <value>3</value>
+			 </equals>
+			 <equals>
+				 <property>controls/MPCD/Lbit</property>
+				 <value>0</value>
+			 </equals>
+        </and>
+	 </condition>
+ </animation>
+ 
+
+</PropertyList>
+
+

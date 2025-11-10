@@ -187,7 +187,7 @@
   </axis>
  </animation>
 
- 
+
  <animation>
         <type>knob</type>
     <object-name>vms2</object-name>
@@ -229,6 +229,154 @@
   <object-name>vms2</object-name>
   <type>rotate</type>
   <property>/controls/electric/vms2</property>
+  <factor>25</factor>
+  <offset-deg>0</offset-deg>
+  <axis>
+  <object-name>line1</object-name>
+  </axis>
+ </animation>
+
+
+<animation>
+        <type>knob</type>
+    <object-name>util</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/electric/battswitch</property>
+                <value>0</value>
+                <value>1</value>           
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen1</tooltip-id>
+                <label>(Utility) Battery Switch</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+
+
+ <animation>
+  <object-name>util</object-name>
+  <type>rotate</type>
+  <property>/controls/electric/battswitch</property>
+  <factor>25</factor>
+  <offset-deg>0</offset-deg>
+  <axis>
+  <object-name>line1</object-name>
+  </axis>
+ </animation>
+
+
+<animation>
+        <type>knob</type>
+    <object-name>emer</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/electric/emergen</property>
+                <value>0</value>
+                <value>1</value>           
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen1</tooltip-id>
+                <label>Emergency Backup Generator Switch</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+
+
+ <animation>
+  <object-name>emer</object-name>
+  <type>rotate</type>
+  <property>/controls/electric/emergen</property>
+  <factor>25</factor>
+  <offset-deg>0</offset-deg>
+  <axis>
+  <object-name>lineemer</object-name>
+  </axis>
+ </animation>
+
+
+
+<animation>
+        <type>knob</type>
+    <object-name>emerbatt</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/electric/emerbatt</property>
+                <value>0</value>
+                <value>1</value>           
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen1</tooltip-id>
+                <label>Emergency Backup Battery</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+
+
+ <animation>
+  <object-name>emerbatt</object-name>
+  <type>rotate</type>
+  <property>/controls/electric/emerbatt</property>
   <factor>25</factor>
   <offset-deg>0</offset-deg>
   <axis>

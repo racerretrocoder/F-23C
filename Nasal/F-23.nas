@@ -454,6 +454,15 @@ setprop("controls/apu/startinprogress",0);
 # if all's good. start the engines
 # Controls the battery switch, APU, and Engine start switches and there effectiveness (If they work or not)
 
+setprop("f22/bingo",4000);
+var checkbingo = func() {
+  if (getprop("consumables/fuel/total-fuel-lbs") < getprop("f22/bingo")){
+    setprop("f22/isbingo",1);
+  } else {
+    setprop("f22/isbingo",0);
+  }
+}
+
 var engloop = func{
 setprop("sim/multiplay/visibility-range-nm",2000); # Going to put this here because smh the -set dosent set it to be 1000
 
@@ -556,8 +565,9 @@ var bat = getprop("controls/electric/battswitch");
 
 
 timer_eng = maketimer(0.25, engloop);
-
+bingotimer = maketimer(0.3,checkbingo);
 setlistener("sim/signals/fdm-initialized", func {
 # Spawned in/went to location
 timer_eng.start();
+bingotimer.start();
 });
