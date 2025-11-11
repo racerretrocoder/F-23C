@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+  <model>
+  <name>screen</name>
+    <path>radar-screen.xml</path>
+    			<offsets>
+				<x-m>0.000</x-m>
+				<y-m>-0.0095</y-m>
+				<z-m>0.024</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+  </model>
+</PropertyList>
+
+

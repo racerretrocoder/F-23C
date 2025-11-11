@@ -550,6 +550,253 @@ var bat = getprop("controls/electric/battswitch");
 
 
 
+# What happens when the radar Locks on, Goes into STT and spikes target (see lockhelper.nas)
+# Also controls the radar mode, Scanning settings, Azimuth, Speed, etc
+var tgtlock = func{
+if (getprop("instrumentation/radar/lock") == 1){
+var target1_x = radar.tgts_list[radar.Target_Index].TgtsFiles.getNode("h-offset",1).getValue();
+var target1_z = radar.tgts_list[radar.Target_Index].TgtsFiles.getNode("v-offset",1).getValue();
+setprop("instrumentation/radar2/lockmarker", target1_x / 10);
+setprop("instrumentation/radar2/lockmarker", target1_x / 10);
+#setprop("instrumentation/radar/az-field", 161);
+# setprop("instrumentation/radar/grid", 0);
+#print(target1_x / 10);
+setprop("instrumentation/radar2/sweep-speed", 10);
+setprop("instrumentation/radar/lock2", 2);
+  } elsif (getprop("instrumentation/radar/lock") == 0){
+    if(getprop("instrumentation/radar/mode/main") == 3)
+    {   # SLR
+        setprop("instrumentation/radar/az-field", 280);
+        setprop("instrumentation/radar2/sweep-display-width", 0.1646);        
+        setprop("instrumentation/radar2/sweep-speed", 2);   
+        #acmtimer.stop();
+      #  wcs_mode = "pulse-srch";
+      #  AzField.setValue(120);
+      #  swp_diplay_width = 0.0844;
+    }  
+    if(getprop("instrumentation/radar/mode/main") == 1)
+    {   # RWS
+        setprop("instrumentation/radar/az-field", 120);
+        setprop("instrumentation/radar2/sweep-display-width", 0.0846);        
+        setprop("instrumentation/radar2/sweep-speed", 1);   
+        #acmtimer.stop();
+      #  wcs_mode = "pulse-srch";
+      #  AzField.setValue(120);
+      #  swp_diplay_width = 0.0844;
+    }
+    elsif(getprop("instrumentation/radar/mode/main") == 0)
+    {
+        setprop("instrumentation/radar/az-field", 60);
+        # TWS
+        setprop("instrumentation/radar2/sweep-display-width", 0.0446);        
+        setprop("instrumentation/radar2/sweep-speed", 1);   
+        tgts_list = [];
+        #acmtimer.stop();
+    }
+    elsif(getprop("instrumentation/radar/mode/main") == 2)
+    {
+        setprop("instrumentation/radar/az-field", 60);
+        # ACM
+        #acmtimer.start();
+        setprop("instrumentation/radar2/sweep-display-width", 0.0446);        
+        setprop("instrumentation/radar2/sweep-speed", 2);   
+        tgts_list = [];
+    }
+
+    
+  }
+}
+
+
+# HOFFSET -6,
+
+var checkclosestmp = func(cs=nil) {
+setprop("misc/closestmp", 100000); # reset
+  setprop("misc/callsign","abcdefghijk"); # reset
+  var list = props.globals.getNode("/ai/models").getChildren("multiplayer");
+  var total = size(list);
+  var mpid = 0;
+  var theprop = getprop("misc/closestmp");
+  for(var i = 0; i < total; i += 1) {
+      var mpid = i;
+      var callsign = getprop("ai/models/multiplayer[" ~ mpid ~ "]/callsign");
+      var inrange = getprop("ai/models/multiplayer[" ~ mpid ~ "]/radar/in-range");
+      if (inrange == 1){
+      var range = getprop("ai/models/multiplayer[" ~ mpid ~ "]/radar/range-nm");
+      } else {
+      var range = 99999; # mm yes lol
+      }
+
+      print("checking " ~ callsign ~ "");
+      if (getprop("misc/closestmp") == 100000) {
+        # Has been reset
+        #screen.log.write("Begin mpsearch");
+        #screen.log.write(i);
+       #screen.log.write(callsign);
+        setprop("misc/closestmp", range); # reset
+        setprop("misc/callsign",callsign);
+
+      } else {
+        # Range has been changed lets check
+       #screen.log.write(i);
+
+        if (getprop("misc/closestmp") > range) {
+          #screen.log.write("Found new closer target!");
+           #screen.log.write(callsign);
+          setprop("misc/closestmp", range);          
+          setprop("misc/callsign",callsign);
+        }
+      }
+
+  }
+}
+
+
+# ACM "Dogfight mode"
+# Still experimental
+# Debug messages left on
+var radarlook = func(cs=nil) {
+  var list = props.globals.getNode("/instrumentation/radar2/targets").getChildren("multiplayer");
+  var total = size(list);
+  var mpid = 0;
+  print("ACM Dogfight mode Debug!");
+  for(var i = 0; i < total; i += 1) {
+      var mpid = i;
+      print(mpid);
+      if (getprop("instrumentation/radar2/targets/multiplayer[" ~ mpid ~ "]/h-offset") == nil) {
+        print("thats nil!");
+      }
+      var callsign = getprop("ai/models/multiplayer[" ~ mpid ~ "]/callsign");
+      if (getprop("instrumentation/radar2/targets/multiplayer[" ~ mpid ~ "]/callsign") == nil or getprop("instrumentation/radar2/targets/multiplayer[" ~ mpid ~ "]/callsign") == "") {
+        print("radar callsign nil!");
+      }
+      if (getprop("instrumentation/radar/lock") == 1){
+        print("radar is already locked");
+        return 1;
+      }
+
+      #print("checking " ~ callsign ~ ".");
+      var radarON = 1;
+      var target1_x = getprop("instrumentation/radar2/targets/multiplayer[" ~ mpid ~ "]/h-offset");
+      var target1_z = getprop("instrumentation/radar2/targets/multiplayer[" ~ mpid ~ "]/v-offset");
+      if (target1_x or 0 > 0 and radarON ==1)
+      {
+        var dist_O = math.sqrt(math.pow(target1_x, 2)+math.pow(target1_z, 2));
+        var oriAngle = math.asin(target1_x / dist_O);
+        if(target1_z < 0){
+          oriAngle = 3.141592654 - oriAngle;
+        }
+        var Rollrad = (getprop("orientation/roll-deg") / 180) * 3.141592654;
+        target1_x = dist_O * math.sin(oriAngle - Rollrad);
+        target1_z = dist_O * math.cos(oriAngle - Rollrad);
+        var kx = abs(target1_x/7.25);
+        var kz = abs(target1_z/6);
+        if((kx > 1) or (kz > 1)){
+          if(kx > kz){
+            target1_x = target1_x / kx;
+            target1_z = target1_z / kx;
+          }else{
+            target1_z = target1_z / kz;
+            target1_x = target1_x / kz;
+          }
+        }
+#screen.log.write("x");
+#screen.log.write(target1_x);
+#screen.log.write("z");
+#screen.log.write(target1_z); 
+        # Z +6 -6
+        # X +5 -5
+        # i
+        if (target1_x > -6 and target1_x < 6 and target1_z > -6 and target1_z < 6) {
+          # Target is in the hud
+          screen.log.write("Radar ACM: Can lock! Locking...");
+          screen.log.write(callsign);
+          #checkcloestmp("");
+          #        screen.log.write("Radar: Locked "~tgts_list[Target_Index].Callsign.getValue(),1,1,0);''
+         
+          var radarcs = radar.tgts_list[radar.Target_Index].Callsign.getValue();
+          acmcheck(radarcs,mpid,total);
+          break;
+        }
+     }
+  }
+}
+
+
+var acmcheck = func(radarcs,mpid,total) {
+  screen.log.write("acm dbug: in here now");
+  screen.log.write("total:" ~ total);
+  screen.log.write("radarcs:" ~ radarcs);
+  screen.log.write("mpid:" ~ mpid);
+  for(var i = 0; i < total; i += 1) {
+    #screen.log.write("Iteration: "~i~".");
+    if (radarcs != getprop("ai/models/multiplayer[" ~ mpid ~ "]/callsign")) {
+      #screen.log.write("Dosent match!");
+      radar.next_Target_Index(1);
+    } else {
+      screen.log.write("Radar: ACM Locked "~radar.tgts_list[radar.Target_Index].Callsign.getValue());
+      setprop("instrumentation/radar/lock", 1);
+      break;
+    }
+  }
+}
+
+# Cool arrow pointer
+setprop("controls/radar/lockedinhud",0);
+var arrowpointer = func() {      
+  var radarON = getprop("su-27/instrumentation/N010-radar/emitting");
+  # First check if radar on and locked. else go away
+  if (radarON != 1 or getprop("/instrumentation/radar/lock") != 1){
+    return -1;
+  }
+  var target1_x = radar.tgts_list[radar.Target_Index].TgtsFiles.getNode("h-offset",1).getValue();
+  var target1_z = radar.tgts_list[radar.Target_Index].TgtsFiles.getNode("v-offset",1).getValue();
+  var lockedcallsign = radar.tgts_list[radar.Target_Index].TgtsFiles.getNode("callsign",1).getValue();
+  if (target1_x or 0 > 0 and radarON == 1) {
+    var dist_O = math.sqrt(math.pow(target1_x, 2)+math.pow(target1_z, 2));
+    var oriAngle = math.asin(target1_x / dist_O);
+    if(target1_z < 0){
+      oriAngle = 3.141592654 - oriAngle;
+    }
+    var Rollrad = (getprop("orientation/roll-deg") / 180) * 3.141592654;
+    target1_x = dist_O * math.sin(oriAngle - Rollrad);
+    target1_z = dist_O * math.cos(oriAngle - Rollrad);
+    var kx = abs(target1_x/7.25);
+    var kz = abs(target1_z/6);
+    if((kx > 1) or (kz > 1)){
+      if(kx > kz){
+        target1_x = target1_x / kx;
+        target1_z = target1_z / kx;
+      }else{
+        target1_z = target1_z / kz;
+        target1_x = target1_x / kz;
+      }
+    }
+    if (target1_x > -6 and target1_x < 6 and target1_z > -6 and target1_z < 6) {
+        # Target in the hud
+        #screen.log.write("In HUD");
+        setprop("/controls/radar/hud-pointer",0);
+        setprop("/controls/radar/hud-rotate",0);
+    } else {
+        # Target not in hud
+        setprop("/controls/radar/hud-pointer",1); # show arrow
+        #screen.log.write(lockedcallsign);
+        #screen.log.write(target1_x);
+        #screen.log.write(target1_z);
+        setprop("/controls/radar/error-deg",target1_x);
+        setprop("/controls/radar/error-pitch-deg",target1_z);
+
+    }
+  }
+}
+
+
+
+
+
+
+
+
 # reinit previous flight params
 #var aglreinit = func {
 #var terflw = getprop("controls/switches/terrain-follow");
@@ -563,11 +810,13 @@ var bat = getprop("controls/electric/battswitch");
 #}
 ### end of terrain avoidance behaviour #########################
 
-
+locktgt_timer = maketimer(0.1, tgtlock);
+acmtimer = maketimer(0.5,radarlook);
 timer_eng = maketimer(0.25, engloop);
 bingotimer = maketimer(0.3,checkbingo);
 setlistener("sim/signals/fdm-initialized", func {
 # Spawned in/went to location
+locktgt_timer.start();
 timer_eng.start();
 bingotimer.start();
 });

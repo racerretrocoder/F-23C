@@ -3,26 +3,165 @@
 <PropertyList>
 
     <path>YFECS.ac</path>
-    
-    <animation>
-       <type>range</type>
-       <min-m>0</min-m>
-       <max-m>10</max-m>
-    </animation>
- 
+  
   <animation>
  <object-name>base</object-name>
    <type>material</type>
      <emission> 
       <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
-        <red>0.5</red>
-        <green>0.2</green>
-        <blue>0.2</blue>
+        <red>0.1</red>
+        <green>0.8</green>
+        <blue>0.1</blue>
       </emission>
   </animation>
 
 
-   
-</PropertyList>
+   <animation>
+        <type>knob</type>
+    <object-name>ecsmode</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/ECS/mode</property>
+                <value>0</value>
+                <value>1</value>
+                <value>2</value>           
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen1</tooltip-id>
+                <label>ECS Mode</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
 
+
+
+
+ <animation>
+  <object-name>ecsmode</object-name>
+  <type>rotate</type>
+  <property>/controls/ECS/mode</property>
+  <factor>25</factor>
+  <offset-deg>0</offset-deg>
+  <axis>
+  <object-name>line1</object-name>
+  </axis>
+ </animation>
+
+   <animation>
+        <type>knob</type>
+    <object-name>pitot</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/ECS/pitot</property>
+                <value>0</value>
+                <value>1</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen1</tooltip-id>
+                <label>Anti-ice (Engine | Pitot)</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+
+
+ <animation>
+  <object-name>pitot</object-name>
+  <type>rotate</type>
+  <property>/controls/ECS/pitot</property>
+  <factor>45</factor>
+  <offset-deg>0</offset-deg>
+  <axis>
+  <object-name>line3</object-name>
+  </axis>
+ </animation>
+
+
+   <animation>
+        <type>knob</type>
+    <object-name>pitot</object-name>
+        <value>0.0</value> <!-- or property as usual for rotate animation -->        
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>/controls/ECS/pitot</property>
+                <value>0</value>
+                <value>1</value>
+                <wrap>false</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>gen1</tooltip-id>
+                <label>Anti-ice (Engine | Pitot)</label>
+            </binding>
+        </hovered>
+  <increase>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </increase>
+        <decrease>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/clicksmall</property>
+      </binding>
+        </decrease> 
+    </animation>
+
+
+
+
+ <animation>
+  <object-name>cabpress</object-name>
+  <type>rotate</type>
+  <property>/controls/ECS/press</property>
+  <factor>45</factor>
+  <offset-deg>0</offset-deg>
+  <axis>
+  <object-name>line2</object-name>
+  </axis>
+ </animation>
+
+
+</PropertyList>
 

@@ -4,20 +4,16 @@
 
     <path>spacer.ac</path>
 
-    <animation>
-	<type>range</type>
-	<min-m>0</min-m>
-	<max-m>10</max-m>
-    </animation>
- 
+
+
   <animation>
          <object-name>base</object-name>
      <type>material</type>
      <emission> 
       <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
-        <red>0.5</red>
-        <green>0.2</green>
-        <blue>0.2</blue>
+        <red>0.1</red>
+        <green>0.8</green>
+        <blue>0.1</blue>
       </emission>
   </animation> 
 

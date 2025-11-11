@@ -32,10 +32,30 @@ var R5 = func() {
 
 var R6 = func() {
     var page = getprop("controls/MPCD/Rpage");
+    if (page == 6) {
+        # change radar mode
+        radar.radar_mode_toggle();
+    }
+    if (page == 0) {
+        setprop("controls/MPCD/Rpage",6);
+    }
 }
 
 var R7 = func() {
     var page = getprop("controls/MPCD/Rpage");
+    if (page == 6) {
+        # radar grid / plane
+        var grid = getprop("instrumentation/radar/grid");
+        print(grid);
+        if(grid == 1)
+        {
+        setprop("instrumentation/radar/grid", 0); # turn off the grid
+        }
+        elsif(grid == 0)
+        {
+        setprop("instrumentation/radar/grid", 1); # Turn on the grid
+        }
+    }
 }
 
 var R8 = func() {
@@ -64,6 +84,10 @@ var R12 = func() {
 
 var R13 = func() {
     var page = getprop("controls/MPCD/Rpage");
+    if (page == 6) {
+        # return to menu from radar
+        setprop("controls/MPCD/Rpage",0);
+    }
 }
 
 var R14 = func() {
@@ -113,6 +137,9 @@ var L2 = func() {
 
 var L3 = func() {
     var page = getprop("controls/MPCD/Lpage");
+    if (page == 0) {
+        setprop("controls/MPCD/Lpage",3); # Engine
+    }
 }
 
 var L4 = func() {
@@ -125,10 +152,30 @@ var L5 = func() {
 
 var L6 = func() {
     var page = getprop("controls/MPCD/Lpage");
+    if (page == 6) {
+        # change radar mode
+        radar.radar_mode_toggle();
+    }
+    if (page == 0) {
+        setprop("controls/MPCD/Lpage",6);
+    }
 }
 
 var L7 = func() {
     var page = getprop("controls/MPCD/Lpage");
+    if (page == 6) {
+        # radar grid / plane
+        var grid = getprop("instrumentation/radar/grid");
+        print(grid);
+        if(grid == 1)
+        {
+        setprop("instrumentation/radar/grid", 0); # turn off the grid
+        }
+        elsif(grid == 0)
+        {
+        setprop("instrumentation/radar/grid", 1); # Turn on the grid
+        }
+    }
 }
 
 var L8 = func() {
@@ -141,6 +188,9 @@ var L9 = func() {
 
 var L10 = func() {
     var page = getprop("controls/MPCD/Lpage");
+    if (page == 3) {
+        setprop("controls/MPCD/Lpage",0);
+    }
 }
 
 var L11 = func() {
@@ -153,6 +203,10 @@ var L12 = func() {
 
 var L13 = func() {
     var page = getprop("controls/MPCD/Lpage");
+    if (page == 6) {
+        # return to menu from radar
+        setprop("controls/MPCD/Lpage",0);
+    }
 }
 
 var L14 = func() {

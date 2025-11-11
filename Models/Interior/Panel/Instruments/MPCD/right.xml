@@ -10,9 +10,15 @@
   <name>menu</name>
     <path>menu.xml</path>
   </model>
+
   <model>
   <name>engine</name>
     <path>engine.xml</path>
+  </model>
+
+  <model>
+  <name>aaradar</name>
+    <path>radar.xml</path>
   </model>
 
 
@@ -70,7 +76,26 @@
 	 </condition>
  </animation>
  
- 
+   <animation>
+	 <type>select</type>
+	 <object-name>aaradar</object-name>
+	 <condition>   
+        <and>
+			 <equals>
+				 <property>controls/MPCD/Rpower</property>
+				 <value>1</value>
+			 </equals>
+			 <equals>
+				 <property>controls/MPCD/Rpage</property>
+				 <value>6</value>
+			 </equals>
+			 <equals>
+				 <property>controls/MPCD/Rbit</property>
+				 <value>0</value>
+			 </equals>
+        </and>
+	 </condition>
+ </animation>
 
 </PropertyList>
 

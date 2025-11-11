@@ -8,6 +8,9 @@ myRadar = radar.Radar.new();
 myRadar.init();
 
 
+var acmtimer = YF23.acmtimer;
+
+
 var heatloop = func() {
     var throttle = getprop("controls/engines/engine/throttle");
     if (throttle < 0.60) {

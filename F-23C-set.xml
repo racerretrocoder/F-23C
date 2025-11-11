@@ -60,7 +60,7 @@ NR/MD F-23Csimulation config.
       </view>
 
   <sound>
-   <path>Aircraft/F-23C/Sounds/sound.xml</path>
+   <path>Aircraft/F-23C/Sounds/Sound.xml</path>
   </sound>
 
   
@@ -789,6 +789,8 @@ NR/MD F-23Csimulation config.
 	  </scenario>
   </ai>
   
+
+  <!--UFC-->
 <COMP>
 <text1 type="string"></text1>
 <text2 type="string"></text2>
@@ -823,7 +825,13 @@ NR/MD F-23Csimulation config.
 <Lpower type="int">0</Lpower>
 
 </MPCD>
-
+<ECS>
+<mode type="int">-1</mode>
+<pitot type="int">0</pitot> <!--Auto/On-->
+<cabin type="int">-1</cabin> <!--RamDump/Dump/Norm-->
+<bleed type="int">0</bleed>
+<press type="int">0</press>
+</ECS>
 
 <vms>
 <bit type="int">0</bit>
@@ -1341,14 +1349,14 @@ NR/MD F-23Csimulation config.
 <file>Aircraft/F-23C/Nasal/doors.nas</file>
 </doors>
 
-<F-23C>
+<YF23>
 <file>Aircraft/F-23C/Nasal/light.nas</file>
 <file>Aircraft/F-23C/Nasal/doors.nas</file>
 <file>Aircraft/F-23C/Nasal/liveries.nas</file>
 <file>Aircraft/F-23C/Nasal/fuel.nas</file>
 <file>Aircraft/F-23C/Nasal/F-23.nas</file>
 <file>Aircraft/F-23C/Nasal/HUD.nas</file>
-</F-23C>
+</YF23>
 
     <phd>
       <file>Aircraft/F-23C/Nasal/phd.nas</file>

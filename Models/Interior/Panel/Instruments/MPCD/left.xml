@@ -15,6 +15,11 @@
     <path>engine.xml</path>
   </model>
 
+  <model>
+  <name>aaradar</name>
+    <path>radar.xml</path>
+  </model>
+
 
   <animation>
 	 <type>select</type>
@@ -69,6 +74,26 @@
 	 </condition>
  </animation>
  
+    <animation>
+	 <type>select</type>
+	 <object-name>aaradar</object-name>
+	 <condition>   
+        <and>
+			 <equals>
+				 <property>controls/MPCD/Lpower</property>
+				 <value>1</value>
+			 </equals>
+			 <equals>
+				 <property>controls/MPCD/Lpage</property>
+				 <value>6</value>
+			 </equals>
+			 <equals>
+				 <property>controls/MPCD/Lbit</property>
+				 <value>0</value>
+			 </equals>
+        </and>
+	 </condition>
+ </animation>
 
 </PropertyList>
 
